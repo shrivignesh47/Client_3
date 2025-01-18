@@ -1,0 +1,14 @@
+.carousel{
+ height: 89vh;
+ width: 100vw;
+ background-color: #231709;
+ clip-path: circle(62.6% at 14% 0);
+}
+
+.logo1{
+    height: 280px;
+    width: 280px;
+    padding:10px; 
+    padding-right: 10px;
+    
+}
