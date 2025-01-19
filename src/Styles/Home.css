@@ -21,6 +21,16 @@
         width: auto;
         font-size: 1px;
     }
+    .carousel-right{
+        flex: '1 1 60%'; 
+      height: 10vh;
+      width: 56vh;
+      /* background-color: aqua;     */
+      overflow: 'hidden'; 
+      position: 'relative';
+      margin-left:-10vh;
+ 
+    }
   }
   
 

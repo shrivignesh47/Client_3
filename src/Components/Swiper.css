@@ -1,0 +1,115 @@
+.swiper {
+    margin-top: 10vh;
+    margin-left: 81vh;
+    width: 70%;
+    height: 75%;
+  }
+  
+  /* Center text in slides */
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Images inside slides */
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Autoplay progress */
+  .autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #231709;
+  }
+  
+  .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: #231709 !important;
+    fill: none;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }
+  
+  /* Hide navigation arrows */
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+  
+  /* Pagination bullet colors */
+  .swiper-pagination-bullet {
+    background-color: #231709;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #231709;
+  }
+  
+  /* Responsive Styles */
+  
+  /* For screens up to 762px */
+  @media (max-width: 762px) {
+    .swiper {
+      margin-top: 8vh;
+      margin-left: 0;
+      width: 100%; /* Adjust width to fit smaller screens */
+      height: 100%; /* Adjust height proportionally */
+    }
+  
+    .swiper-slide {
+      font-size: 16px; /* Slightly smaller text */
+    }
+  
+    .autoplay-progress {
+      right: 10px; /* Adjust position */
+      bottom: 10px;
+      width: 40px; /* Smaller progress indicator */
+      height: 40px;
+    }
+  }
+  
+  /* For screens up to 468px */
+  @media (max-width: 468px) {
+    .swiper {
+      flex-direction: column;
+      margin-left:-9.5vh;
+      width: 120%; /* Full-width for smaller devices */
+      height:50%;
+      top: 40vh; /* Adjust height proportionally */
+    }
+  
+    .swiper-slide {
+      font-size: 14px; /* Smaller text for smaller screens */
+    }
+  
+    .autoplay-progress {
+      right: 8px; /* Adjust position */
+      bottom: 8px;
+      width: 36px; /* Even smaller progress indicator */
+      height: 36px;
+    }
+  }
+  

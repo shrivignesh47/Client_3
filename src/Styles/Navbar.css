@@ -1,3 +1,4 @@
+/* Base Styles (For larger screens) */
 .navbar {
     background-color: #D2AC47;
     border-bottom: 2px dotted #D2AC47;
@@ -64,6 +65,8 @@
     top: 20px;
     right: 20px;
 }
+
+/* Responsive Design for Tablets (max-width: 768px) */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -119,7 +122,7 @@
         display: block; /* Ensure logo is shown on mobile */
         position: relative; /* Reset the position for mobile */
         top: 9vh;
-        right:-0.1vh;
+        right: -0.1vh;
         height: 15vh;
         width: 18vh;
         margin-left: -35.1vh; /* Adjust margin if needed */
@@ -127,11 +130,12 @@
     }
 }
 
+/* Responsive Design for Small Screens (max-width: 480px) */
 @media (max-width: 480px) {
     .logo {
         font-size: 35px;
-        margin-bottom:-13vh;
-        margin-left:7.5vh;
+        margin-bottom: -13vh;
+        margin-left: 7.5vh;
     }
 
     .hamburger {
@@ -142,5 +146,17 @@
     .link {
         font-size: 14px;
         padding: 10px 15px;
+    }
+}
+
+/* Adjust navbar-logo position for large screens like 14-inch MacBook Pro */
+@media (min-width: 1024px) {
+    .navbar-logo {
+        height: 100px;
+        width: 117px;
+        position: absolute;
+        right: 205vh;
+        top: 46.4%;
+        transform: translateY(-50%);
     }
 }
