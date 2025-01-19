@@ -1,33 +1,39 @@
-.carousel {
-    height: 89vh;
+.carousel1 {
+    height: 91vh;
     width: 100vw;
     background-color: #231709;
     clip-path: circle(62.6% at 14% 0); /* Default for larger screens */
   }
   
   @media (max-width: 768px) {
-    .carousel {
+    .carousel1 {
       clip-path: circle(75% at 50% 0); /* Adjust clip-path for tablets and small devices */
     }
   }
   
   @media (max-width: 480px) {
-    .carousel {
+    .carousel1 {
       clip-path: circle(85% at 50% 0); /* Adjust for very small screens */
+    }
+    .carousel-text{
+        margin-left:1vh;
+        margin-top:-5vh;
+        width: auto;
+        font-size: 1px;
     }
   }
   
 
 .logo1{
     height: 310px;
-    width: 31   0px;
+    width: 310px;
     padding:10px; 
     padding-right: 10px;
     
 }
 @media (max-width: 480px) {
     .logo1 {
-        margin-left: 60px;
+        margin-left: 35px;
     }
   }
 @keyframes fadeIn {

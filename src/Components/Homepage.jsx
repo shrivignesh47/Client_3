@@ -2,11 +2,15 @@ import React from 'react'
 import Navbar from './Navbar'
 import '../Styles/Home.css'
 import logo from '../Assets/taj.png'
+import { CarouselWithIndicatorsExample } from './carouselimg'
 export default function Homepage() {
   return (
     <div className='homecontainer' style={{backgroundColor:'#D2AC47' , height:'100vh' , width:'100vw'}}>
     <Navbar/>
-    <div className='carousel'>
+    <div  className='carousel right' style={{marginLeft:'10vh' , height:'0vh'}}>
+    
+    </div>
+    <div className='carousel1'>
     <img className="logo1 -ml-[-240px]" src={logo} alt="logo"   style={{
       animation: 'fadeIn 1.5s ease-in',
       opacity: 0,
@@ -17,11 +21,12 @@ export default function Homepage() {
       opacity: 0,
       animationFillMode: 'forwards',
     }}>
-    <h1 className="text-[#D2AC47] font-serif text-[14px] sm:text-[16px] md:text-[17px] lg:text-[19px] xl:text-[17px] font-bold leading-relaxed tracking-wide">
+    
+    <h1 className="text-[#D2AC47] font-serif text-[11px] sm:text-[16px] md:text-[17px] lg:text-[19px] xl:text-[17px] font-bold leading-relaxed tracking-wide">
     At Hotel Taj, we craft exceptional meals blending tradition and innovation, using only the finest ingredients. Whether it’s a family meal, casual outing, or grand celebration, our elegant ambiance and impeccable service make every moment unforgettable. Indulge in aromatic Indian delicacies and global cuisines, thoughtfully prepared to delight your taste buds. Make your events truly special with our catering services!
     </h1>
-  </div>
-   </div>
+    </div>  
+    </div>
     </div>
   )
 }

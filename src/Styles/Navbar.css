@@ -13,16 +13,16 @@
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 2px;
-    margin-left: 15vh;
+    margin-left: 14vh;
 }
 
 .navbar-logo {
-    height: 110px; /* Set the logo size */
-    width: 110px;
-    position: absolute; /* Position the logo at the right */
-    right: 206vh; /* Adjust this value to your liking */
-    top: 5%;
-    transform: translateY(-50%); /* Center vertically */
+    height: 100px;
+    width: 117px;
+    position: absolute;
+    right: 206vh;
+    top: 46.4%;
+    transform: translateY(-50%);
 }
 
 .links {
@@ -64,7 +64,6 @@
     top: 20px;
     right: 20px;
 }
-
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -93,6 +92,7 @@
         bottom: 0;
         z-index: 999;
         align-items: center;
+        height: 100vh; /* Ensure it takes full screen height */
     }
 
     .links.open {
@@ -115,27 +115,28 @@
         display: block;
     }
 
-
     .navbar-logo {
         display: block; /* Ensure logo is shown on mobile */
         position: relative; /* Reset the position for mobile */
-        top: 0;
-        right: 0;
+        top: 9vh;
+        right:-0.1vh;
         height: 15vh;
         width: 18vh;
-        transform: none; /* Remove vertical centering */
-        margin-left: -41.6vh; /* Adjust margin if needed */
-        margin-top:-80px; /* Space between logo and menu */
+        margin-left: -35.1vh; /* Adjust margin if needed */
+        margin-top: -50px; /* Space between logo and menu */
     }
 }
 
 @media (max-width: 480px) {
     .logo {
         font-size: 35px;
-        margin-bottom:-7vh;
+        margin-bottom:-13vh;
+        margin-left:7.5vh;
     }
+
     .hamburger {
-        margin-top: -2vh;
+        margin-top: 5vh;
+        height: 18px;
     }
 
     .link {
