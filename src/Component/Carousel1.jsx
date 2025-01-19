@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+ import React, { useRef } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -44,16 +44,16 @@ export default function Car() {
       >
         {/* Replace slides with images */}
         <SwiperSlide>
-          <img src={img1} alt="Delicious Briyani 1" style={{ width: '80%', height: '100%', objectFit: 'cover' }} />
+          <img src={img1} alt="Delicious Briyani 1" style={{ width: '70%', height: '100%', objectFit: 'cover' }} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img3} alt="Delicious Briyani 3" style={{ width: '80%', height: '100%', objectFit: 'cover' }} />
+          <img src={img3} alt="Delicious Briyani 3" style={{ width: '70%', height: '100%', objectFit: 'cover' }} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img6} alt="Delicious Briyani 5" style={{ width: '80%', height: '80%', objectFit: 'cover' }} />
+          <img src={img6} alt="Delicious Briyani 5" style={{ width: '70%', height: '80%', objectFit: 'cover' }} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img7} alt="Delicious Briyani 6" style={{ width: '80%', height: '80%', objectFit: 'cover' }} />
+          <img src={img7} alt="Delicious Briyani 6" style={{ width: '70%', height: '80%', objectFit: 'cover' }} />
         </SwiperSlide>
 
         {/* Autoplay progress circle */}

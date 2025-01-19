@@ -1,23 +1,50 @@
-import React from 'react'
+import React , { useState, useEffect } from 'react'
 import Navbar from './Navbar'
 import '../Styles/Home.css'
 import logo from '../Assets/taj.png'
 // import { CarouselWithIndicatorsExample } from './carouselimg'
 import Car from './Carousel1'
+import Gallery  from './Gallery'
 export default function Homepage() {
+  const [currentDish, setCurrentDish] = useState('Beef Briyani');
+  const dishNames = ['Beef Briyani', 'Soup', 'Chicken Briyani', 'Lemon Chicken'];
+
+  useEffect(() => {
+    let interval;
+    const updateDish = () => {
+      setCurrentDish((prevDish) => {
+        const currentIndex = dishNames.indexOf(prevDish);
+        const nextIndex = (currentIndex + 1) % dishNames.length;
+        return dishNames[nextIndex];
+      });
+    };
+
+    interval = setTimeout(() => {
+      const currentIndex = dishNames.indexOf(currentDish);
+
+      // If it's the last item, delay 4 seconds, otherwise default 3 seconds
+      const delay = currentIndex === dishNames.length - 1 ? 3500 : 2500;
+      clearTimeout(interval);
+      updateDish();
+    }, currentDish === dishNames[dishNames.length - 1] ? 3500 : 2500);
+
+    return () => clearTimeout(interval); // Cleanup interval on unmount
+  }, [currentDish]);
   return (
-    <div className='homecontainer' style={{backgroundColor:'#D2AC47' , height:'100vh' , width:'100vw'}}>
+    <div className='homecontainer' style={{backgroundColor:'#D2AC47' , height:'100%' , width:'98.93'}}>
     <Navbar/>
     <div  className='carousel-right1'style={{marginLeft:'10vh' , height:'0vh'}}>
     <div className="carousel-right" style={{
       flex: '1 1 60%', 
-      height: '90.9vh', 
+      height: '100vh',
       // backgroundColor:'red',
       overflow: 'hidden', 
       position: 'relative',
       // marginLeft: '10vh',
     }}>
     <Car/>
+
+    <h6 className="fonty">{currentDish}</h6>
     </div>
     
     </div>
@@ -38,6 +65,8 @@ export default function Homepage() {
     </h1>
     </div>  
     </div>
+  <br></br>
+    <Gallery/>
     </div>
   )
 }

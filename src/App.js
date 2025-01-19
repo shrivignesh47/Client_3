@@ -1,5 +1,5 @@
 import './App.css';
-import Homepage from './Components/Homepage';
+import Homepage from './Component/Homepage';
 import '@coreui/coreui/dist/css/coreui.min.css'
 import 'swiper/css';
 

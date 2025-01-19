@@ -96,7 +96,7 @@
     .swiper {
       flex-direction: column;
       margin-left:-9.5vh;
-      width: 120%; /* Full-width for smaller devices */
+      width: 150%; /* Full-width for smaller devices */
       height:50%;
       top: 40vh; /* Adjust height proportionally */
     }
@@ -106,10 +106,11 @@
     }
   
     .autoplay-progress {
-      right: 8px; /* Adjust position */
+      right: 90px; /* Adjust position */
       bottom: 8px;
       width: 36px; /* Even smaller progress indicator */
       height: 36px;
     }
   }
+  
   

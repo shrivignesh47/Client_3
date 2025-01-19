@@ -1,57 +1,88 @@
 .carousel1 {
-    height: 91vh;
-    width: 100vw;
-    background-color: #231709;
-    clip-path: circle(62.6% at 14% 0); /* Default for larger screens */
+  height: 91vh;
+  width: 98vw;
+  background-color: #231709;
+  clip-path: circle(62.6% at 14% 0); /* Default for larger screens */
+}
+
+@media (max-width: 768px) {
+  .carousel1 {
+    clip-path: circle(75% at 50% 0); /* Adjust clip-path for tablets and small devices */
   }
-  
-  @media (max-width: 768px) {
-    .carousel1 {
-      clip-path: circle(75% at 50% 0); /* Adjust clip-path for tablets and small devices */
-    }
+}
+
+@media (max-width: 480px) {
+  .carousel1 {
+    clip-path: circle(85% at 50% 0); /* Adjust for very small screens */
   }
-  
-  @media (max-width: 480px) {
-    .carousel1 {
-      clip-path: circle(85% at 50% 0); /* Adjust for very small screens */
-    }
-    .carousel-text{
-        margin-left:1vh;
-        margin-top:-5vh;
-        width: auto;
-        font-size: 1px;
-    }
-    .carousel-right{
-        flex: '1 1 60%'; 
-      height: 10vh;
-      width: 56vh;
-      /* background-color: aqua;     */
-      overflow: 'hidden'; 
-      position: 'relative';
-      margin-left:-10vh;
- 
-    }
+  .carousel-text{
+      margin-left:1vh;
+      margin-top:-5vh;
+      width: auto;
+      font-size: 1px;
   }
-  
+  .carousel-right{
+      flex: '1 1 60%'; 
+    height: 10vh;
+    width: 50vh;
+    /* background-color: aqua;     */
+    overflow: 'hidden'; 
+    position: 'relative';
+    margin-left:-11.9vh;
+
+  }
+
+  .carousel-right1{
+    height: 100vh;
+  }
+}
+
 
 .logo1{
-    height: 310px;
-    width: 310px;
-    padding:10px; 
-    padding-right: 10px;
-    
+  height: 310px;
+  width: 310px;
+  padding:10px; 
+  padding-right: 10px;
+  
 }
 @media (max-width: 480px) {
-    .logo1 {
-        margin-left: 35px;
-    }
+  .logo1 {
+      margin-left: 35px;
   }
+}
 @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  0% {
+    opacity: 0;
   }
-  
+  100% {
+    opacity: 1;
+  }
+}
+  .fonty{
+  font-family: 'Brush Script MT', 'Brush Script Std', cursive; 
+  font-size: 48px;
+  color: black;
+  text-align: center;
+  margin-right:-100vh;
+}
+
+
+/* For screens smaller than 768px (tablets and mobile devices) */
+@media (max-width: 768px) {
+  .fonty {
+    font-size: 32px;
+    margin-left: -106vh;
+    margin-top: -42vh;
+    z-index: 1000vh;
+  }
+}
+
+/* For screens smaller than 480px (smaller mobile devices) */
+@media (max-width: 480px) {
+  .fonty {
+    font-size: 40px;
+    margin-right: -110vh;
+    margin-left: -106vh;
+    margin-top: 32vh; /* Adjust margin for small screens */
+  }
+}
