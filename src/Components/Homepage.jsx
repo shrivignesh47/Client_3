@@ -7,14 +7,20 @@ export default function Homepage() {
     <div className='homecontainer' style={{backgroundColor:'#D2AC47' , height:'100vh' , width:'100vw'}}>
     <Navbar/>
     <div className='carousel'>
-    <img  className='logo1' src={logo} alt="logo"/>
-    <div className='carousel-text' style={{height:'280px',width:'55vw',backgroundColor:'',marginLeft:'2vh'}}>
-    <h1 style={{color:'#D2AC47'}}>At Hotel Taj, we pride ourselves on serving a diverse menu that blends traditional and modern recipes, crafted using the finest ingredients. Whether you're here for a family meal, a casual outing, 
-    or a special celebration, we aim to make every visit memorable with our exceptional food, elegant ambiance, and impeccable service.  
-
-    From aromatic Indian delicacies to a variety of global cuisines, our chefs bring passion and creativity to every dish, ensuring a delightful journey for your taste buds.
-     We also offer catering services to make your events truly special.</h1>
-    </div>
+    <img className="logo1 -ml-[-240px]" src={logo} alt="logo"   style={{
+      animation: 'fadeIn 1.5s ease-in',
+      opacity: 0,
+      animationFillMode: 'forwards',
+    }}/>
+    <div className="carousel-text h-[300px] w-[54vw] ml-[-0.3vh]"  style={{
+      animation: 'fadeIn 1.5s ease-in',
+      opacity: 0,
+      animationFillMode: 'forwards',
+    }}>
+    <h1 className="text-[#D2AC47] font-serif text-[14px] sm:text-[16px] md:text-[17px] lg:text-[19px] xl:text-[17px] font-bold leading-relaxed tracking-wide">
+    At Hotel Taj, we craft exceptional meals blending tradition and innovation, using only the finest ingredients. Whether it’s a family meal, casual outing, or grand celebration, our elegant ambiance and impeccable service make every moment unforgettable. Indulge in aromatic Indian delicacies and global cuisines, thoughtfully prepared to delight your taste buds. Make your events truly special with our catering services!
+    </h1>
+  </div>
    </div>
     </div>
   )
