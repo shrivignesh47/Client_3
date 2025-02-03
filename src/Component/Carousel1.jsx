@@ -1,4 +1,4 @@
- import React, { useRef } from 'react';
+import React, { useRef } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -13,6 +13,7 @@ import img4 from '../Assets/briyani8.png';
 import img6 from '../Assets/briyani6.png';
 import img7 from '../Assets/briyani7.png';
 import img1 from '../Assets/briyani1.png';
+
 // Import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
@@ -30,6 +31,8 @@ export default function Car() {
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
+        loop={true} // Enable infinite loop
+        speed={1000} // Adjust transition speed (in milliseconds)
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,

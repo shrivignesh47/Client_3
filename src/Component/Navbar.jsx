@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="logo">Hotel Taj</div>
+      <div className="logo"></div>
       <div className="hamburger" onClick={toggleMenu}>
         ☰
       </div>

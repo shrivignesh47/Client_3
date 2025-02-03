@@ -1,16 +1,18 @@
 /* Base Styles (For larger screens) */
 .navbar {
-    background-color: #D2AC47;
-    border-bottom: 2px dotted #D2AC47;
+    background-color:#352323;
+    border-bottom: 2px solid #c47623;
+    /* border-bottom: 2px solid #D2AC47; */
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background-image: url("../Assets/pattern-wave.png");
 }
 
 .logo {
-    color: #231709;
+    color: #c47623;
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -32,7 +34,7 @@
 }
 
 .link {
-    color: #231709;
+    color: #c47623;
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
@@ -60,7 +62,7 @@
     display: none;
     font-size: 36px;
     cursor: pointer;
-    color: #231709;
+    color: #c47623;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -86,7 +88,7 @@
         flex-direction: column;
         gap: 10px;
         width: 100%;
-        background-color: #D2AC47;
+        background-color: #c47623;
         padding: 20px;
         position: absolute;
         top: 0;

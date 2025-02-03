@@ -5,6 +5,8 @@ import logo from '../Assets/taj.png'
 // import { CarouselWithIndicatorsExample } from './carouselimg'
 import Car from './Carousel1'
 import Gallery  from './Gallery'
+import VisionMission from './VisonMisson'
+import { InstagramEmbed } from './InstagramEmbed'
 export default function Homepage() {
   const [currentDish, setCurrentDish] = useState('Beef Briyani');
   const dishNames = ['Beef Briyani', 'Soup', 'Chicken Briyani', 'Lemon Chicken'];
@@ -31,7 +33,7 @@ export default function Homepage() {
     return () => clearTimeout(interval); // Cleanup interval on unmount
   }, [currentDish]);
   return (
-    <div className='homecontainer' style={{backgroundColor:'#D2AC47' , height:'100%' , width:'98.93'}}>
+    <div className='homecontainer'>
     <Navbar/>
     <div  className='carousel-right1'style={{marginLeft:'10vh' , height:'0vh'}}>
     <div className="carousel-right" style={{
@@ -60,13 +62,23 @@ export default function Homepage() {
       animationFillMode: 'forwards',
     }}>
     
-    <h1 className="text-[#D2AC47] font-serif text-[11px] sm:text-[16px] md:text-[17px] lg:text-[19px] xl:text-[17px] font-bold leading-relaxed tracking-wide">
+    <h1 className="text-[#c47623] font-serif text-[11px] sm:text-[16px] md:text-[17px] lg:text-[19px] xl:text-[17px] font-bold leading-relaxed tracking-wide">
     At Hotel Taj, we craft exceptional meals blending tradition and innovation, using only the finest ingredients. Whether it’s a family meal, casual outing, or grand celebration, our elegant ambiance and impeccable service make every moment unforgettable. Indulge in aromatic Indian delicacies and global cuisines, thoughtfully prepared to delight your taste buds. Make your events truly special with our catering services!
     </h1>
     </div>  
     </div>
   <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
     <Gallery/>
+    <br></br>
+    <br></br>
+    <br></br>
+    <VisionMission/>
+    <InstagramEmbed  profileUrl="https://www.instagram.com/hotel_taj_ooty_/"/>
     </div>
   )
 }
