@@ -7,6 +7,7 @@ import Car from './Carousel1'
 import Gallery  from './Gallery'
 import VisionMission from './VisonMisson'
 import { InstagramEmbed } from './InstagramEmbed'
+import dpattern from '../Assets/dpattern.png'
 export default function Homepage() {
   const [currentDish, setCurrentDish] = useState('Beef Briyani');
   const dishNames = ['Beef Briyani', 'Soup', 'Chicken Briyani', 'Lemon Chicken'];
@@ -33,7 +34,7 @@ export default function Homepage() {
     return () => clearTimeout(interval); // Cleanup interval on unmount
   }, [currentDish]);
   return (
-    <div className='homecontainer'>
+    <div className='homecontainer h-[screen]'>
     <Navbar/>
     <div  className='carousel-right1'style={{marginLeft:'10vh' , height:'0vh'}}>
     <div className="carousel-right" style={{
@@ -62,9 +63,10 @@ export default function Homepage() {
       animationFillMode: 'forwards',
     }}>
     
-    <h1 className="text-[#c47623] font-serif text-[11px] sm:text-[16px] md:text-[17px] lg:text-[19px] xl:text-[17px] font-bold leading-relaxed tracking-wide">
+    <h1 className="text-[#D2A260] font-serif text-[11px] sm:text-[16px] md:text-[17px] lg:text-[19px] xl:text-[17px] font-bold leading-relaxed tracking-wide mt-[-3vh]">
     At Hotel Taj, we craft exceptional meals blending tradition and innovation, using only the finest ingredients. Whether it’s a family meal, casual outing, or grand celebration, our elegant ambiance and impeccable service make every moment unforgettable. Indulge in aromatic Indian delicacies and global cuisines, thoughtfully prepared to delight your taste buds. Make your events truly special with our catering services!
     </h1>
+    <img className='dpattern h-[25vh] ml-[24vh] mt-[-2vh]' src={dpattern} alt='pattern' />
     </div>  
     </div>
   <br></br>

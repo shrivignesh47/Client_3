@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Utensils, Coffee } from "lucide-react";
-// import briyanibg from "../Assets/briyani1.mp4";
+import briyanibg from "../Assets/briyani1.mp4";
 
 export function InstagramEmbed({ profileUrl }) {
   useEffect(() => {

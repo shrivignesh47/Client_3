@@ -12,7 +12,7 @@
 }
 
 .logo {
-    color: #c47623;
+    color: #D2A260;
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -34,7 +34,7 @@
 }
 
 .link {
-    color: #c47623;
+    color: #D2A260;
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
@@ -62,7 +62,7 @@
     display: none;
     font-size: 36px;
     cursor: pointer;
-    color: #c47623;
+    color: #D2A260;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -88,7 +88,7 @@
         flex-direction: column;
         gap: 10px;
         width: 100%;
-        background-color: #c47623;
+        background-color: #D2A260;
         padding: 20px;
         position: absolute;
         top: 0;
