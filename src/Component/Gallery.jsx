@@ -31,18 +31,18 @@ export default function Gallery() {
     <div
       className="max-w-screen-xl mx-auto py-8"
       style={{
-        backgroundColor: '#352323',
+        backgroundColor: '#121414',
         padding: '20px',
         borderRadius: '15px',
       }}
     >
       {/* Gallery Title */}
-      <h2 className="text-3xl font-bold text-[#c47623] text-center mb-6">
+      <h2 className="text-3xl font-bold text-[#d2a260] text-center mb-6">
         Gallery
       </h2>
 
       {/* Main Image Carousel */}
-      <div className="relative border-4 border-gray-700 rounded-lg p-4 bg-[#c47623]">
+      <div className="relative border-4 border-gray-700 rounded-lg p-4 bg-[#d2a260]">
         <img
           src={images[currentIndex]}
           alt="Gallery"
@@ -63,14 +63,14 @@ export default function Gallery() {
       </div>
 
       {/* Image Preview Slider */}
-      <div className="mt-4 flex space-x-5 overflow-x-auto pb-1 bg-[#231709] p-4 rounded-lg">
+      <div className="mt-4 flex space-x-5 overflow-x-auto pb-1 bg-[#d2a260] p-4 rounded-lg">
         {images.map((image, index) => (
           <div
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`cursor-pointer relative flex-shrink-0 w-[100px] h-[60px] rounded-lg overflow-hidden ${
               currentIndex === index
-                ? 'border-4 border-[#c47623]'
+                ? 'border-4 border-[#121414]'
                 : 'border-2 border-gray-500'
             }`}
           >

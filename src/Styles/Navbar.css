@@ -1,14 +1,15 @@
-/* Base Styles (For larger screens) */
+/* Base Styles */
 .navbar {
-    background-color:#352323;
-    border-bottom: 2px solid #c47623;
-    /* border-bottom: 2px solid #D2AC47; */
-    padding: 15px 30px;
+    /* background-color: #352323; */
+    background-color: #121414;
+    border-bottom: 2px solid #ecd5b7;
+    padding: 15px 20px; /* Reduced padding for smaller screens */
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     background-image: url("../Assets/pattern-wave.png");
+    position: relative; /* Ensure child elements can be positioned absolutely */
 }
 
 .logo {
@@ -16,15 +17,17 @@
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 2px;
-    margin-left: 14vh;
+    text-align: center;
+    margin-left: auto; 
+    margin-right: auto; /* Center logo horizontally */
 }
 
 .navbar-logo {
-    height: 100px;
-    width: 117px;
+    height: 80px; /* Adjusted for consistency */
+    width: 96px; /* Adjusted for consistency */
     position: absolute;
-    right: 206vh;
-    top: 46.4%;
+    left: 20px; /* Fixed position for all screens */
+    top: 50%;
     transform: translateY(-50%);
 }
 
@@ -45,21 +48,21 @@
 }
 
 .link:hover {
-    background-color: gold;
+    background-color: #D2A260;
+    color: #352323; /* Optional: Change text color on hover */
 }
 
 /* Hamburger Icon for Mobile */
 .hamburger {
-    display: none;
+    display: none; /* Hidden by default */
     cursor: pointer;
-    margin-left: 42vh;
-    margin-top: -6vh;
-    font-size: 40px;
+    font-size: 30px; /* Standardized size */
+    color: #D2A260;
 }
 
 /* Close button for Mobile Menu */
 .close-btn {
-    display: none;
+    display: none; /* Hidden by default */
     font-size: 36px;
     cursor: pointer;
     color: #D2A260;
@@ -68,40 +71,36 @@
     right: 20px;
 }
 
-/* Responsive Design for Tablets (max-width: 768px) */
+/* Responsive Design for Tablets and Smaller Screens */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        padding: 0px 10px;
+        padding: 10px 10px; /* Reduced padding for smaller screens */
     }
 
     .logo {
-        margin-bottom: 10px;
-        margin-left: 10px;
-        margin-top: 1vh;
-        font-size: 20px;
+        margin: 10px 0; /* Centered vertically */
+        font-size: 20px; /* Slightly smaller font size */
         text-align: center;
     }
 
     .links {
-        display: none; /* Hide the links initially */
+        display: none; /* Hide links initially */
         flex-direction: column;
         gap: 10px;
         width: 100%;
         background-color: #D2A260;
         padding: 20px;
         position: absolute;
-        top: 0;
+        top: 100%; /* Position below the navbar */
         left: 0;
         right: 0;
-        bottom: 0;
         z-index: 999;
         align-items: center;
-        height: 100vh; /* Ensure it takes full screen height */
     }
 
     .links.open {
-        display: flex;
+        display: flex; /* Show links when menu is open */
     }
 
     .link {
@@ -112,53 +111,35 @@
     }
 
     .hamburger {
-        display: block;
+        display: block; /* Show hamburger icon */
+        margin-left: auto; /* Align to the right */
+        margin-top: 10px;
     }
 
-    /* Show close button when menu is open */
     .close-btn {
-        display: block;
+        display: block; /* Show close button */
     }
 
     .navbar-logo {
-        display: block; /* Ensure logo is shown on mobile */
-        position: relative; /* Reset the position for mobile */
-        top: 9vh;
-        right: -0.1vh;
-        height: 15vh;
-        width: 18vh;
-        margin-left: -35.1vh; /* Adjust margin if needed */
-        margin-top: -50px; /* Space between logo and menu */
+        position: static; /* Reset position for mobile */
+        height: 80px;
+        width: 96px;
+        margin: 10px auto; /* Center logo horizontally */
     }
 }
 
-/* Responsive Design for Small Screens (max-width: 480px) */
+/* Responsive Design for Small Screens */
 @media (max-width: 480px) {
     .logo {
-        font-size: 35px;
-        margin-bottom: -13vh;
-        margin-left: 7.5vh;
+        font-size: 18px; /* Smaller font size for very small screens */
     }
 
     .hamburger {
-        margin-top: 5vh;
-        height: 18px;
+        font-size: 24px; /* Smaller hamburger icon */
     }
 
     .link {
-        font-size: 14px;
+        font-size: 14px; /* Smaller link text */
         padding: 10px 15px;
-    }
-}
-
-/* Adjust navbar-logo position for large screens like 14-inch MacBook Pro */
-@media (min-width: 1024px) {
-    .navbar-logo {
-        height: 100px;
-        width: 117px;
-        position: absolute;
-        right: 205vh;
-        top: 46.4%;
-        transform: translateY(-50%);
     }
 }

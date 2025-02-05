@@ -1,5 +1,5 @@
 .homecontainer{
-  background-color: #c47623;
+  background-color: #d2a260;
    height:'100%' ;
    width:'98.93';
    background-image: url("../Assets/tile-yellow.png");
@@ -9,7 +9,8 @@
   .carousel1 {
     height: 110vh;
     width: 98vw;
-    background-color: #352323;
+    /* background-color: #352323; */
+    background-color: #121414;
     clip-path: circle(62.9% at 13% 0);
     z-index: 1000;
     position: relative;

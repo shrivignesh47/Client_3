@@ -11,7 +11,7 @@ export default function VisionMission() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#c47623] p-4 overflow-hidden">
+    <div className="min-h-screen bg-[#d2a260] p-4 overflow-hidden">
       <div
         style={{
           opacity: isVisible ? 1 : 0,
@@ -20,7 +20,7 @@ export default function VisionMission() {
         }}
         className="max-w-4xl mx-auto"
       >
-        <h1 className="text-4xl sm:text-5xl font-bold text-center mb-8 font-playfair text-[#352323]">
+        <h1 className="text-4xl sm:text-5xl font-bold text-center mb-8 font-playfair text-[#121414]">
           Our Vision & Mission
         </h1>
         <div className="space-y-12">
@@ -31,11 +31,11 @@ export default function VisionMission() {
               transition: "opacity 0.8s 0.2s, transform 0.8s 0.2s",
             }}
           >
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-4 flex items-center justify-center font-playfair text-[#352323]">
+            <h2 className="text-2xl sm:text-3xl font-semibold mb-4 flex items-center justify-center font-playfair text-[#121414]">
               <Utensils className="mr-2" />
               Vision
             </h2>
-            <p className="text-lg sm:text-xl text-[#352323] text-center">
+            <p className="text-lg sm:text-xl text-[#121414] text-center">
               To become a cherished dining destination known for delivering unforgettable culinary experiences, where
               every meal brings joy, comfort, and a sense of togetherness, inspiring a love for great food and
               exceptional service.
@@ -52,7 +52,7 @@ export default function VisionMission() {
               <Utensils className="mr-2" />
               Mission
             </h2>
-            <p className="text-lg sm:text-xl text-[#352323] text-center">
+            <p className="text-lg sm:text-xl text-[#121414] text-center">
               To delight our guests with a wide range of freshly prepared, high-quality dishes that celebrate flavor and
               tradition. We are committed to providing warm, attentive service, maintaining the highest standards of
               cleanliness, and creating a welcoming atmosphere where every visit feels like a celebration of great food.
@@ -61,10 +61,10 @@ export default function VisionMission() {
         </div>
       </div>
       <div className="mt-12 flex justify-around">
-        <AnimatedFoodIcon icon={<Pizza size={48} color="#352323" />} delay={0.2} />
-        <AnimatedFoodIcon icon={<Coffee size={48} color="#352323" />} delay={0.4} />
-        <AnimatedFoodIcon icon={<IceCream size={48} color="#352323" />} delay={0.6} />
-        <AnimatedFoodIcon icon={<Salad size={48} color="#352323" />} delay={0.8} />
+        <AnimatedFoodIcon icon={<Pizza size={48} color="#121414" />} delay={0.2} />
+        <AnimatedFoodIcon icon={<Coffee size={48} color="#121414" />} delay={0.4} />
+        <AnimatedFoodIcon icon={<IceCream size={48} color="#121414" />} delay={0.6} />
+        <AnimatedFoodIcon icon={<Salad size={48} color="#121414" />} delay={0.8} />
       </div>
     </div>
   );
