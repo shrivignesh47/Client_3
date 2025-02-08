@@ -1,11 +1,30 @@
 .min-h-screen{
-    background-image: url("../Assets/tile-yellow.png");
+    /* background-image: url("../Assets/tile-yellow.png"); */
 }
 
 .instagram-embed-container{
-    background-image: url("../Assets/pattern-wave.png") ; 
+    /* background-image: url("../Assets/pattern-wave.png") ;  */
 }
 
 /* #
-#ecd5b7
-#121414 */
+#d2a260 text
+#121414  bg */
+
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    border-radius: 20px;
+}
+
+.swiper-3d .swiper-slide-shadow {
+    display: none !important;
+  }
+
+  .menuswiper{
+      left:10vh;
+    width: 90%;
+    height: 100%;
+  }

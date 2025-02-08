@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="hamburger" onClick={toggleMenu}>
         ☰
       </div>
-      <div className={`links ${isMenuOpen ? 'open' : ''}`}>
+      <div className={`fabril-fatface links ${isMenuOpen ? 'open' : ''}`}>
         <div className="close-btn" onClick={closeMenu}>
           &times;
         </div>

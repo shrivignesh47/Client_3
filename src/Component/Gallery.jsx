@@ -11,6 +11,8 @@ import img2 from '../Assets/hotel_pics/pic9.jpg';
 import img1 from '../Assets/hotel_pics/pic10.jpg';
 import img3 from '../Assets/hotel_pics/pic11.jpg';
 import img4 from '../Assets/hotel_pics/pic12.jpg';
+import { FocusCards } from '../components/ui/focus-cards';
+
 
 export default function Gallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,17 +33,20 @@ export default function Gallery() {
     <div
       className="max-w-screen-xl mx-auto py-8"
       style={{
-        backgroundColor: '#121414',
+        backgroundColor: '#121414 ',
         padding: '20px',
         borderRadius: '15px',
       }}
     >
+
+
       {/* Gallery Title */}
-      <h2 className="text-3xl font-bold text-[#d2a260] text-center mb-6">
+      <h2 className="fabril-fatface text-3xl font-bold text-[#d2a260] text-center mb-6">
         Gallery
       </h2>
 
       {/* Main Image Carousel */}
+
       <div className="relative border-4 border-gray-700 rounded-lg p-4 bg-[#d2a260]">
         <img
           src={images[currentIndex]}

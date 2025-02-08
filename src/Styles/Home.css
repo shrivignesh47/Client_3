@@ -1,8 +1,8 @@
 .homecontainer{
-  background-color: #d2a260;
+  background-color: #121414;
    height:'100%' ;
    width:'98.93';
-   background-image: url("../Assets/tile-yellow.png");
+   /* background-image: url("../Assets/tile-yellow.png"); */
    
    
   }
@@ -12,10 +12,15 @@
     /* background-color: #352323; */
     background-color: #121414;
     clip-path: circle(62.9% at 13% 0);
-    z-index: 1000;
+    z-index: 1;
     position: relative;
     background-image: url("../Assets/pattern-wave.png");
 }
+
+.giffy{
+  z-index: 1;
+}
+
 
 @media (max-width: 768px) {
   .carousel1 {

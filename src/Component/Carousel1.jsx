@@ -6,13 +6,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-import './Swiper.css';
-import img3 from '../Assets/briyani9.png';
-import img4 from '../Assets/briyani8.png';
-import img6 from '../Assets/briyani6.png';
-import img7 from '../Assets/briyani7.png';
-import img1 from '../Assets/briyani1.png';
+import '../Styles/Swiper.css'
+import img3 from '../Assets/soup1.png';
+import img6 from '../Assets/cbriyani.png';
+import img7 from '../Assets/lemon.png';
+import img1 from '../Assets/beef.png';
 
 // Import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
@@ -35,7 +33,7 @@ export default function Car() {
         speed={1000} // Adjust transition speed (in milliseconds)
         autoplay={{
           delay: 2500,
-          disableOnInteraction: false,
+          disableOnInteraction: true,
         }}
         pagination={{
           clickable: true,
@@ -47,18 +45,17 @@ export default function Car() {
       >
         {/* Replace slides with images */}
         <SwiperSlide>
-          <img src={img1} alt="Delicious Briyani 1" style={{ width: '70%', height: '100%', objectFit: 'cover' }} />
+          <img src={img1} alt="Delicious Briyani 1" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img3} alt="Delicious Briyani 3" style={{ width: '70%', height: '100%', objectFit: 'cover' }} />
+          <img src={img3} alt="Delicious Briyani 3"/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img6} alt="Delicious Briyani 5" style={{ width: '70%', height: '80%', objectFit: 'cover' }} />
+          <img src={img6} alt="Delicious Briyani 5"/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img7} alt="Delicious Briyani 6" style={{ width: '70%', height: '80%', objectFit: 'cover' }} />
+          <img src={img7} alt="Delicious Briyani 6"/>
         </SwiperSlide>
-
         {/* Autoplay progress circle */}
         <div className="autoplay-progress" slot="container-end">
           <svg viewBox="0 0 48 48" ref={progressCircle}>

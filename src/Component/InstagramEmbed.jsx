@@ -39,7 +39,7 @@ export function InstagramEmbed({ profileUrl }) {
         className="mt-[-110vh] mx-auto max-w-4xl p-4 z-20"
         >
         <div className="instagram-embed-container relative rounded-lg shadow-lg p-4 bg-[#121414]">
-        <h2 className="text-3xl font-bold text-center mb-8 font-playfair text-[#d2a260]">
+        <h2 className="fabril-fatface text-3xl font-bold text-center mb-8 font-playfair text-[#d2a260]">
         Taste Our Instagram Feed
         </h2>
           <blockquote
