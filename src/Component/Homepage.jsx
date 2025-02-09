@@ -11,6 +11,7 @@ import dpattern from '../Assets/dpattern.png'
 import Menu from './Menu'
 import Location from './Location'
 import { InfiniteMovingCardsDemo } from './Testimonal'
+import RollingGallery from '../components/RollingGallery/RollingGallery'
 // import CircularGallery from '../components/CircularGallery/CircularGallery'
 export default function Homepage() {
   return (
