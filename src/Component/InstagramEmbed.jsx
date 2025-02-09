@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import briyanibg from "../Assets/briyani1.mp4";
 import "../Styles/vm.css";
+import ShinyText from "../components/ShinyText/ShinyText";
 export function InstagramEmbed({ profileUrl }) {
   useEffect(() => {
     const script = document.createElement("script");
@@ -14,7 +15,7 @@ export function InstagramEmbed({ profileUrl }) {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden mt-[-30vh]">
       {/* Background Video */}
       <div className="w-full relative" style={{ aspectRatio: "16 / 9" }}>
         <video
@@ -40,7 +41,7 @@ export function InstagramEmbed({ profileUrl }) {
         >
         <div className="instagram-embed-container relative rounded-lg shadow-lg p-4 bg-[#121414]">
         <h2 className="fabril-fatface text-3xl font-bold text-center mb-8 font-playfair text-[#d2a260]">
-        Taste Our Instagram Feed
+        <ShinyText text="Taste Our Instagram Feed" disabled={false} speed={3} className="custom-class fabril-fatface text-3xl" />
         </h2>
           <blockquote
             className="instagram-media"

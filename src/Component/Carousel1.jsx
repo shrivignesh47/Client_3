@@ -10,7 +10,8 @@ import '../Styles/Swiper.css'
 import img3 from '../Assets/soup1.png';
 import img6 from '../Assets/cbriyani.png';
 import img7 from '../Assets/lemon.png';
-import img1 from '../Assets/beef.png';
+import img1 from '../Assets/posters/pt8.png';
+import img4 from '../Assets/beef.png';
 
 // Import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
@@ -47,6 +48,9 @@ export default function Car() {
         <SwiperSlide>
           <img src={img1} alt="Delicious Briyani 1" />
         </SwiperSlide>
+        <SwiperSlide>
+        <img src={img4} alt="Delicious Briyani 1" />
+      </SwiperSlide>
         <SwiperSlide>
           <img src={img3} alt="Delicious Briyani 3"/>
         </SwiperSlide>

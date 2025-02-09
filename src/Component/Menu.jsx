@@ -3,9 +3,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-
 import "swiper/css/effect-cards"; // Effect-specific styles
-import "../Styles/vm.css"
+import "../Styles/vm.css";
 // Import required modules
 import { EffectCards } from "swiper/modules";
 
@@ -18,6 +17,8 @@ import menu5 from "../Assets/menu/hotel_taj_menu_page-0005.jpg";
 import menu6 from "../Assets/menu/hotel_taj_menu_page-0006.jpg";
 import menu7 from "../Assets/menu/hotel_taj_menu_page-0007.jpg";
 import menu8 from "../Assets/menu/hotel_taj_menu_page-0008.jpg";
+import { TextHoverEffect } from "../components/ui/text-hover-effect";
+import ShinyText from "../components/ShinyText/ShinyText";
 
 export default function Menu() {
   // Array of menu images
@@ -25,56 +26,58 @@ export default function Menu() {
 
   return (
     <>
-      {/* Header Section */}
-    
-        <h1 className="fabril-fatface text-5xl font-bold text-[#d2a260] mt-[10vh]">Our Menu</h1>
-        <p className="fabril-fatface mt-2 text-xl text-[#d2a260]">
-          Explore our delicious offerings
+    {/* Header Section */}
+    <ShinyText text="Our Menu" disabled={false} speed={3} className="custom-class fabril-fatface text-5xl" />
+      <p className="mt-2 text-xl text-[#d2a260] text-center">
+        Explore our delicious offerings
         </p>
+
         
-        {/* Grid Layout for Swiper and Description */}
-        <div className="min-h-screen flex justify-center items-center bg-[#121414]">
+      {/* Grid Layout for Swiper and Description */}
+      <div className="min-h-screen flex justify-center items-center bg-[#121414]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-6xl px-6">
-        
-        
-        
-        {/* Right Column: Menu Description */}
-        <div className="flex flex-col justify-center space-y-4 text-[#D2A260]">
-        
-        <h2 className="fabril-fatface text-4xl font-semibold">Delicious Dishes</h2>
-      <p className="fabril-fatfacetext-lg">
+          {/* Left Column: Menu Description */}
+          <div className="flex flex-col justify-center space-y-4 text-[#D2A260]">
+            
+            <ShinyText text="Delicious Dishes" disabled={false} speed={3} className="custom-class fabril-fatface text-4xl" />
+            <p className="text-lg">
               Our menu features a wide variety of dishes crafted with love and
               care. From traditional recipes to modern twists, every dish is
               designed to satisfy your taste buds.
             </p>
-            <p className="fabril-fatface text-lg">
+            <p className="text-lg">
               Whether you're craving spicy curries, flavorful biryanis, or
               decadent desserts, we have something for everyone. Explore our
               menu and discover your next favorite meal!
             </p>
-            <button className="fabril-fatface mt-4 px-6 py-3 bg-[#D2A260] text-[#121414] font-semibold rounded-full shadow-lg hover:bg-[#291b1b] transition-colors duration-300">
-            View Full Menu
-            </button>
-            </div>
+           
+          </div>
+
+          {/* Right Column: Swipe Text & Swiper Section */}
+          <div className="flex flex-col items-center">
+            {/* Moved Swipe Text Above Swiper */}
+            <TextHoverEffect text="..Swipe-->.. "  />
+
             <Swiper
-            effect={'cards'}
-            grabCursor={true}
-            modules={[EffectCards]}
-            className="menuswiper max-w-lg " // Debugging background
-            style={{ height: "500px" , right:"70vh" , backgroundSize: "cover", }} // Fixed height
+              effect={"cards"}
+              grabCursor={true}
+              modules={[EffectCards]}
+              className="menuswiper max-w-lg"
+              style={{ height: "350px", backgroundSize: "cover"  , marginBottom:"12vh"}} // Fixed height
             >
-            {menuImages.map((image, index) => (
+              {menuImages.map((image, index) => (
                 <SwiperSlide key={index}>
-                <img
-                src={image}
-                alt={`Menu Page ${index + 1}`}
-                className="w-full h-full object-cover rounded-3xl"
-                />
+                  <img
+                    src={image}
+                    alt={`Menu Page ${index + 1}`}
+                    className="w-full h-full object-cover rounded-3xl"
+                  />
                 </SwiperSlide>
-                ))}
-                </Swiper>
+              ))}
+            </Swiper>
           </div>
-          </div>
+        </div>
+      </div>
     </>
   );
 }

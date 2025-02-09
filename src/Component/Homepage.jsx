@@ -9,7 +9,9 @@ import VisionMission from './VisonMisson'
 import { InstagramEmbed } from './InstagramEmbed'
 import dpattern from '../Assets/dpattern.png'
 import Menu from './Menu'
-import giffy from '../Assets/giffy.gif'
+import Location from './Location'
+import { InfiniteMovingCardsDemo } from './Testimonal'
+// import CircularGallery from '../components/CircularGallery/CircularGallery'
 export default function Homepage() {
   return (
     <div className='homecontainer h-[screen]'>
@@ -48,14 +50,12 @@ export default function Homepage() {
     </div>
     <br></br>
     <br></br>
-
     <VisionMission/>
-    <Gallery/>
-    <br></br>
-    <br></br>
-    <br></br>
     <InstagramEmbed  profileUrl="https://www.instagram.com/hotel_taj_ooty_/"/>
+    <Gallery/>
     <Menu/>
+    <InfiniteMovingCardsDemo/>
+    <Location/>
     </div>
   )
 }
