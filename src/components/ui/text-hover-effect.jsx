@@ -25,15 +25,15 @@ export const TextHoverEffect = ({
   return (
     (<svg
       ref={svgRef}
-      width="50%"
-      height="50%"
+      width="80%"
+      height="80%"
       
       viewBox="0 0 300 100"
       xmlns="http://www.w3.org/2000/svg"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onMouseMove={(e) => setCursor({ x: e.clientX, y: e.clientY })}
-      className="select-none mr-[-25vh]">
+      className="select-none mr-[-5vh]">
       <defs>
         <linearGradient
           id="textGradient"

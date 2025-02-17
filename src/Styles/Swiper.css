@@ -14,7 +14,7 @@
    */
   
   /* Center text in slides */
-  .swiper-slide {
+  .mySwiper-slide {
     text-align: center;
     font-size: 18px;
     display: flex;
@@ -24,7 +24,7 @@
   }
   
   /* Images inside slides */
-  .swiper-slide img {
+  .mySwiper-slide img {
     display: block;
     width: auto;
     height: 100%;
@@ -75,14 +75,14 @@
   
   /* For screens up to 762px */
   @media (max-width: 762px) {
-    .swiper {
-      margin-top: 8vh;
+    .mySwiper {
+      margin-top: 55vh;
       margin-left: 0;
       width: 100%; /* Adjust width to fit smaller screens */
       height: 100%; /* Adjust height proportionally */
     }
   
-    .swiper-slide {
+    .mySwiper-slide {
       font-size: 16px; /* Slightly smaller text */
     }
   
@@ -96,15 +96,16 @@
   
   /* For screens up to 468px */
   @media (max-width: 468px) {
-    .swiper {
+    .mySwiper {
       flex-direction: column;
-      margin-left:-9.5vh;
-      width: 150%; /* Full-width for smaller devices */
-      height:50%;
-      top: 40vh; /* Adjust height proportionally */
+      margin-left:0vh;
+      margin-top:10vh;
+      width:100%; /* Full-width for smaller devices */
+      height:90%;
+      top:65vh; /* Adjust height proportionally */
     }
   
-    .swiper-slide {
+    .mySwiper-slide {
       font-size: 14px; /* Smaller text for smaller screens */
     }
   
@@ -116,3 +117,9 @@
     }
   }
   
+
+  .menuswiper{
+    width: 90%;
+    height: 100%;
+    
+  }
