@@ -21,8 +21,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic, such as sending the data to an API or email.
-    console.log("Form Submitted", formData);
+    console.log("Form Submitted shared with hoteltaj", formData);
   };
 
   return (
@@ -54,8 +53,6 @@ export default function Contact() {
                 ></iframe>
                 </div>
             </div>
-            
-            {/* Right Side: Contact Us Form */}
             <div className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left">
               <h3 className="text-2xl font-bold text-[#FFD700] mb-4">
                 <ShinyText text="Contact Us" disabled={false} speed={3} className="custom-class" />
@@ -63,8 +60,6 @@ export default function Contact() {
               <p className="text-[#BFBAB4] mb-4">
                 <ShinyText text="We are here to assist you with your dining experience." disabled={false} speed={3} className="custom-class" />
               </p>
-              
-              {/* Contact Form */}
               <form onSubmit={handleSubmit} className="space-y-4">
               <div className="flex flex-col">
               <label className="text-[#BFBAB4]" htmlFor="name">Name</label>
@@ -120,7 +115,6 @@ export default function Contact() {
       </Card>
       </div>
       <div>
-      
       <Footer />
     </div>
     </div>
