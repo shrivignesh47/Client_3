@@ -2,13 +2,9 @@
   background-color: #121414;
    height:'100%' ;
    width:'98.93';
-   /* background-image: url("../Assets/tile-yellow.png"); */
-   
-   
   }
   .carousel1 {
     width: 98vw;
-    /* background-color: #352323; */
     background-color: #121414;
     clip-path: circle(62.9% at 13% 0);
     z-index: 1;

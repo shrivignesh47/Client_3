@@ -7,66 +7,54 @@ import swiggydeq from '../Assets/delivery.gif';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1a1a1a] text-white py-10 px-6 md:px-16">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Left Section - Hotel Info */}
-        <div>
-          <h2 className="text-4xl font-bold text-gold-500">
-            <ShinyText text="Hotel Taj" disabled={false} speed={3} className="fabril-fatface text-4xl" />
+    <footer className="bg-[#1a1a1a] text-white py-4 px-4 text-xs border-t border-[#d2a260]">
+      <div className="max-w-10xl mx-auto flex flex-wrap justify-between items-center space-y-3 md:space-y-0">
+
+        {/* Left - Hotel Info and Contact */}
+        <div className="text-left flex flex-col items-start space-y-2 md:w-1/3">
+          <h2 className="text-lg font-bold text-[#FFD700]">
+            <ShinyText text="Hotel Taj" disabled={false} speed={3} className="fabril-fatface text-lg" />
           </h2>
-          <p className="text-gray-400 mt-2 text-lg">
-            Experience luxury dining with authentic flavors and world-class service.
-          </p>
+          <p className="text-gray-400">📍 1235 Main St, Ooty, Tamil Nadu</p>
+          <p className="text-gray-400">📞 +91 123 456 7890</p>
         </div>
 
-        {/* Center Section - Location */}
-        <div className="text-center flex flex-col justify-center space-y-2">
-          <h3 className="text-xl font-semibold text-gray-200">Located at:</h3>
-          <p className="text-gray-400">1235 Main Street, Ooty, Tamil Nadu, India</p>
+        {/* Center - Navigation Links */}
+        <div className="hidden md:flex md:justify-right md:items-right md:w-[90vh]">
+          <nav className="flex space-x-4">
+            <a href="/" className="hover:text-[#FFD700]">
+              <ShinyText text="Home" disabled={false} speed={3} className="fabril-fatface text-lg" />
+            </a>
+            <a href="/menu" className="hover:text-[#FFD700]">
+              <ShinyText text="Menu" disabled={false} speed={3} className="fabril-fatface text-lg" />
+            </a>
+            <a href="/about" className="hover:text-[#FFD700]">
+              <ShinyText text="About" disabled={false} speed={3} className="fabril-fatface text-lg" />
+            </a>
+            <a href="/contact" className="hover:text-[#FFD700]">
+              <ShinyText text="Contact" disabled={false} speed={3} className="fabril-fatface text-lg" />
+            </a>
+          </nav>
         </div>
 
-        {/* Right Section - Logos, Delivery GIF, and Contact */}
-        <div className="flex flex-col space-y-4">
-          <h3 className="text-xl font-semibold">Order on:</h3>
-          <div className="flex space-x-5">
-            {/* Swiggy Logo */}
-            <div className="relative group cursor-pointer">
-              <img src={swiggyLogo} alt="Swiggy" className="w-20 transition-transform transform group-hover:scale-110" />
-              <div className="absolute inset-0 bg-orange-500 opacity-0 group-hover:opacity-20 transition-opacity"></div>
-            </div>
-
-            {/* Zomato Logo */}
-            <div className="relative group cursor-pointer">
-              <img src={zomatoLogo} alt="Zomato" className="w-20 transition-transform transform group-hover:scale-110" />
-              <div className="absolute inset-0 bg-red-500 opacity-0 group-hover:opacity-20 transition-opacity"></div>
-            </div>
+        {/* Right - Delivery, GIF & Socials */}
+        <div className="flex flex-col items-center md:w-1/7 md:order-3 space-y-3 mt-10 md:space-y-0 md:mt-0">
+        <ShinyText text="Order on" disabled={false} speed={3} className="fabril-fatface text-lg" />
+        <img src={swiggydeq} alt="Swiggy Delivery" className="w-14" />
+        <div className="flex space-x-9">
+        <img src={swiggyLogo} alt="Swiggy" className="w-10 hover:scale-110 transition" />
+            <img src={zomatoLogo} alt="Zomato" className="w-10 hover:scale-110 transition" />
           </div>
-
-          {/* Delivery GIF (Online Source) */}
-          <div className="text-center mt-4">
-            <img 
-              src={swiggydeq} 
-              alt="Swiggy Delivery Bike" 
-              className="w-24 mx-auto" 
-            />
-          </div>
-
-          {/* Phone Number */}
-          <div className="text-gray-400 mt-4 text-center">
-            <p>Call us: +91 123 456 7890</p>
-          </div>
-
-          {/* Social Media Icons */}
-          <div className="flex space-x-4 mt-4 justify-center">
-            <FaFacebook className="text-xl cursor-pointer hover:text-blue-500 transition-all duration-300" />
-            <FaInstagram className="text-xl cursor-pointer hover:text-pink-500 transition-all duration-300" />
-            <FaTwitter className="text-xl cursor-pointer hover:text-blue-400 transition-all duration-300" />
+          <div className="flex space-x-2 mt-2">
+            <FaFacebook className="cursor-pointer hover:text-blue-500" />
+            <FaInstagram className="cursor-pointer hover:text-pink-500" />
+            <FaTwitter className="cursor-pointer hover:text-blue-400" />
           </div>
         </div>
       </div>
 
       {/* Bottom Line */}
-      <div className="text-center text-gray-500 text-sm mt-10 border-t border-gray-700 pt-4">
+      <div className="text-center text-gray-500 mt-3 border-t border-gray-700 pt-1">
         © 2025 Hotel Taj. All rights reserved.
       </div>
     </footer>

@@ -26,12 +26,12 @@ export function InstagramEmbed() {
           autoPlay
           loop
           muted
-          className="w-full h-[70vh] sm:h-[50vh]  border-[6px] border-[#d2a260] lg:h-[70vh] object-cover absolute top-0 left-0 z-0"
+          className="w-full h-[70vh] sm:h-[50vh] lg:h-[70vh] object-cover absolute top-0 left-0 z-0"
         >
           <source src={briyanibg} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute top-0 left-0 w-full h-full bg-[#121414]/10 backdrop-blur-sm"></div>
+        <div className="absolute top-0 left-0 w-full h-full "></div>
       </div>
 
       {/* Instagram Feed Card */}
@@ -39,9 +39,9 @@ export function InstagramEmbed() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative mx-auto max-w-4xl p-4 z-20 mt-[10vh]  sm:mt-[35vh] lg:mt-[-80vh]"
+        className="relative mx-auto max-w-4xl p-4 z-20 mt-[10vh] sm:mt-[35vh] lg:mt-[-80vh]"
       >
-        <div className="instagram-embed-container  border-[6px] border-[#d2a260] relative rounded-lg shadow-lg p-4 bg-[#121414]">
+        <div className="instagram-embed-container border-[6px] border-[#d2a260] relative rounded-lg shadow-lg p-4 bg-[#121414]">
           {/* Title with Shiny Text */}
           <h2 className="fabril-fatface text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8 font-playfair text-[#d2a260]">
             <ShinyText
@@ -53,19 +53,20 @@ export function InstagramEmbed() {
           </h2>
 
           {/* Elfsight Widget Container */}
-          <div className="relative  h-[45vh]">
+          <div className="relative h-[45vh]">
             {/* Dark Overlay */}
             <div
-              className="absolute top-0 left-0 w-full h-full  bg-black/50 backdrop-blur-sm "
+              className="absolute top-0 left-0 w-full h-full bg-black/50 backdrop-blur-sm"
               style={{ pointerEvents: "none" }} // Allow clicks to pass through
             ></div>
             <div
-              className="elfsight-app-fc51a3d7-8e7c-41f0-8efb-d1ab120c441a  border-[6px] border-[#d2a260]"
+              className="elfsight-app-fc51a3d7-8e7c-41f0-8efb-d1ab120c441a border-[6px] border-[#d2a260] relative"
               data-elfsight-app-lazy
               style={{
                 width: "100%",
-                height: "15vh",
-                maxHeight: "450px",
+                height: "100%",
+                maxHeight: "450px", // Ensure max height
+                overflow: "hidden", // Prevent overflowing content
               }}
             ></div>
           </div>

@@ -14,9 +14,7 @@ export default function VisionMission() {
 
   return (
     <div>
-      {/* Main Container */}
-      <LampContainer className="lg:mt-[-10vh] h-[100vh] md:mt-[10vh] sm:mt-[-20vh] mt-[10vh]">
-        {/* Main Title Animation */}
+      <LampContainer className="lg:mt-[-10vh] h-[100vh] md:mt-[10vh] sm:mt-[-20vh] mt-[5vh]">
         <motion.div
           initial={{ opacity: 0.5, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
@@ -28,8 +26,6 @@ export default function VisionMission() {
           className="mt-[1vh] text-center py-4 bg-clip-text text-transparent md:text-7xl font-medium tracking-tight"
         >
         </motion.div>
-
-        {/* Content Section */}
         <div className="h-50 p-4 sm:p-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -37,14 +33,13 @@ export default function VisionMission() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto space-y-8 lg:space-y-12 lg:mt-[50vh] md:mt-[30vh]"
           >
-            {/* Vision Section */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center"
             >
-              <h1 className="text-4xl sm:text-5xl font-bold text-[#E6CBA8] stroke-1 stroke-black mt-10 md:mt-[30vh]">
+              <h1 className="text-4xl sm:text-4xl font-bold text-[#E6CBA8] stroke-1 stroke-black mt-10 md:mt-[30vh]">
                 Our Vision & Mission
               </h1>
               <h2 className="text-xl sm:text-2xl font-semibold mb-4 flex items-center justify-center text-[#d2a260]">
@@ -62,8 +57,6 @@ export default function VisionMission() {
                 exceptional service.
               </p>
             </motion.div>
-
-            {/* Mission Section */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -88,9 +81,7 @@ export default function VisionMission() {
           </motion.div>
         </div>
       </LampContainer>
-
-      {/* Icons Section */}
-      <div className="mt-[-10vh] p-5 flex flex-wrap justify-center sm:justify-around space-x-4 sm:space-x-8 bg-[#121414]">
+      <div className="mt-[-20vh] p-5 flex flex-wrap justify-center sm:justify-around space-x-4 sm:space-x-8 bg-[#121414]">
         <AnimatedFoodIcon icon={<Pizza size={40} color="#d2a260" />} delay={0.2} />
         <AnimatedFoodIcon icon={<Coffee size={40} color="#d2a260" />} delay={0.4} />
         <AnimatedFoodIcon icon={<IceCream size={40} color="#d2a260" />} delay={0.6} />

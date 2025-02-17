@@ -76,7 +76,7 @@
   /* For screens up to 762px */
   @media (max-width: 762px) {
     .mySwiper {
-      margin-top: 55vh;
+      margin-top: 5vh;
       margin-left: 0;
       width: 100%; /* Adjust width to fit smaller screens */
       height: 100%; /* Adjust height proportionally */
@@ -99,10 +99,10 @@
     .mySwiper {
       flex-direction: column;
       margin-left:0vh;
-      margin-top:10vh;
+      margin-top:0vh;
       width:100%; /* Full-width for smaller devices */
-      height:90%;
-      top:65vh; /* Adjust height proportionally */
+      height:100%;
+      top:50vh; /* Adjust height proportionally */
     }
   
     .mySwiper-slide {

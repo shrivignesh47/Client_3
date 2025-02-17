@@ -5,7 +5,7 @@ import ShinyText from "../components/ShinyText/ShinyText";
 
 export function InfiniteMovingCardsDemo() {
   return (
-    <div className="h-[40rem] rounded-md flex flex-col antialiased bg-#121414 dark:bg-#121415 dark:bg-grid-#121415/[0.05] items-center justify-center relative overflow-hidden fabril-fatface">
+    <div className="h-[40rem] rounded-md mt-[-12vh] flex flex-col antialiased bg-#121414 dark:bg-#121415 dark:bg-grid-#121415/[0.05] items-center justify-center relative overflow-hidden fabril-fatface">
     <ShinyText text="Testimonials" disabled={false} speed={3} className="custom-class fabril-fatface text-3xl" />
     <br></br>
       <InfiniteMovingCards items={testimonials} direction="right" speed="slow" />
