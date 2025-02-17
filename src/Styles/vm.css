@@ -24,7 +24,11 @@
   }
 
   .menuswiper{
-      left:10vh;
+      /* left:10vh; */
     width: 90%;
     height: 100%;
   }
+._aacx{
+    color: rgb(219, 80, 10);
+    background-color: #121414;
+}

@@ -2,14 +2,9 @@
   background-color: #121414;
    height:'100%' ;
    width:'98.93';
-   /* background-image: url("../Assets/tile-yellow.png"); */
-   
-   
   }
   .carousel1 {
-    height: 110vh;
     width: 98vw;
-    /* background-color: #352323; */
     background-color: #121414;
     clip-path: circle(62.9% at 13% 0);
     z-index: 1;
@@ -17,22 +12,17 @@
     background-image: url("../Assets/pattern-wave.png");
 }
 
-.giffy{
-  z-index: 1;
-}
 
 
 @media (max-width: 768px) {
   .carousel1 {
     clip-path: circle(75% at 50% 0); 
-    z-index: 1000;
   }
 }
 
 @media (max-width: 480px) {
   .carousel1 {
-    clip-path: circle(85% at 50% 0);
-    z-index: 1000; 
+    clip-path: circle(85% at 50% 0); 
   }
   .carousel-text{
       margin-left:1vh;
@@ -40,19 +30,7 @@
       width: auto;
       font-size: 1px;
   }
-  .carousel-right{
-      flex: '1 1 60%'; 
-    height: 10vh;
-    width: 50vh;
-    overflow: 'hidden'; 
-    position: 'relative';
-    margin-left:-11.9vh;
 
-  }
-
-  .carousel-right1{
-    height: 100vh;
-  }
 }
 
 
@@ -63,11 +41,7 @@
   padding-right: 10px;
   
 }
-@media (max-width: 480px) {
-  .logo1 {
-      margin-left: 35px;
-  }
-}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -90,7 +64,6 @@
     font-size: 32px;
     margin-left: -106vh;
     margin-top: -42vh;
-    z-index: 1000vh;
   }
 }
 
