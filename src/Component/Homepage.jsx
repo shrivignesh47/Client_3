@@ -60,7 +60,7 @@ export default function Homepage() {
             At Hotel Taj, we craft exceptional meals blending tradition and innovation, using only the finest ingredients. Whether it’s a family meal, casual outing, or grand celebration, our elegant ambiance and impeccable service make every moment unforgettable. Indulge in aromatic Indian delicacies and global cuisines, thoughtfully prepared to delight your taste buds... Make your events truly special with our catering services!
           </h1>
           <img
-            className="dpattern h-[25vh] mx-auto mt-4"
+            className="dpattern h-[20vh] w-[15vh] mx-auto mt-[-1vh] md:mt-[2vh] lg:mt-[3vh]"
             src={dpattern}
             alt="pattern"
             style={{

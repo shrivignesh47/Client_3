@@ -27,7 +27,7 @@ export default function MenuPage() {
   };
 
   return (
-    <div className="menupcon min-h-screen bg-[#121414] text-[#d2a260] overflow-hidden">
+    <div className="menupcon h-full bg-[#121414] text-[#d2a260] overflow-hidden">
       <Navbar />
       {/* Parallax Header */}
       <div 
@@ -71,99 +71,102 @@ export default function MenuPage() {
           </p>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 py-12 font-serif relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {menuCategories.map((category, index) => (
-            <div 
-              key={index} 
-              className="bg-[#1a1c1c] p-8 rounded-lg shadow-xl transform hover:-translate-y-1 transition-all duration-300 animate-fade-in"
-              style={{ 
-                animationDelay: `${index * 100}ms`,
-                transform: `translateY(${Math.max(0, (scrollY - 500) * 0.1)}px)`
-              }}
+      <div className="max-w-7xl mx-auto px-4 py-6 font-serif relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {menuCategories.map((category, index) => (
+          <div 
+            key={index} 
+            className="bg-[#1a1c1c] p-6 rounded-lg shadow-xl transform hover:-translate-y-1 transition-all duration-300 animate-fade-in"
+            style={{ 
+              animationDelay: `${index * 100}ms`,
+              transform: `translateY(${Math.max(0, (scrollY - 500) * 0.1)}px)`
+            }}
+          >
+            {/* Category Title */}
+            <h3 
+              className="text-xl font-bold mb-4 flex items-center justify-between cursor-pointer hover:text-[#e3b670] transition-colors duration-300"
+              onClick={() => toggleCategory(category.title)}
             >
-              <h3 
-                className="text-2xl font-bold mb-6 flex items-center justify-between cursor-pointer hover:text-[#e3b670] transition-colors duration-300"
-                onClick={() => toggleCategory(category.title)}
-              >
-                <span className="flex items-center gap-2">
-                  <Menu className="w-6 h-6" />
-                  {category.title}
-                </span>
-                {expandedCategories[category.title] ? 
-                  <ChevronUp className="w-5 h-5" /> : 
-                  <ChevronDown className="w-5 h-5" />
-                }
-              </h3>
-              <ul className="space-y-4 overflow-hidden transition-all duration-500">
-                {(expandedCategories[category.title] ? category.items : category.items.slice(0, 6)).map((item, idx) => (
-                  <li 
-                    key={idx} 
-                    className="flex justify-between items-center hover:text-[#e3b670] transition-colors duration-300 animate-slide-in"
-                    style={{ animationDelay: `${idx * 50}ms` }}
-                  >
-                    <span className="text-lg">{item}</span>
-                  </li>
-                ))}
-                {!expandedCategories[category.title] && category.items.length > 6 && (
-                  <li 
-                    className="text-sm italic text-center cursor-pointer hover:text-[#e3b670] transition-colors duration-300"
-                    onClick={() => toggleCategory(category.title)}
-                  >
-                    +{category.items.length - 6} more items
-                  </li>
-                )}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <div 
-          className="mt-16 relative  rounded-lg shadow-xl"
-          style={{
-            transform: `translateY(${Math.max(0, (scrollY - 1000) * 0.1)}px)`
-          }}
-        >
-          <div className="relative bg-[#1a1c1c]/80 backdrop-blur-sm p-8">
-            <div className="flex items-center justify-between mb-8">
-              <h3 className="text-3xl font-bold text-[#e3b670]">Chef's Specials</h3>
-              <Coffee className="w-8 h-8 animate-bounce-slow text-[#e3b670]" />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {specialDishes.map((dish, index) => (
-                <div 
-                  key={index}
-                  className="relative h-[200px] rounded-lg overflow-hidden group transform hover:-translate-y-1 transition-all duration-500"
-                  style={{ animationDelay: `${index * 200}ms` }}
+              <span className="flex items-center gap-2">
+                <Menu className="w-5 h-5" />
+                {category.title}
+              </span>
+              {expandedCategories[category.title] ? 
+                <ChevronUp className="w-4 h-4" /> : 
+                <ChevronDown className="w-4 h-4" />
+              }
+            </h3>
+    
+            {/* Menu Items */}
+            <ul className="space-y-2 overflow-hidden transition-all duration-500">
+              {(expandedCategories[category.title] ? category.items : category.items.slice(0, 6)).map((item, idx) => (
+                <li 
+                  key={idx} 
+                  className="flex justify-between items-center hover:text-[#e3b670] transition-colors duration-300 animate-slide-in"
+                  style={{ animationDelay: `${idx * 50}ms` }}
                 >
-                  <img 
-                    src={dish.image} 
-                    alt={dish.title} 
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center group-hover:bg-opacity-40 transition-all duration-300">
-                    <span className="text-white text-xl font-bold transform group-hover:scale-105 transition-transform duration-300">
-                      {dish.title}
-                    </span>
-                  </div>
-                </div>
+                  <span className="text-base">{item}</span>
+                </li>
               ))}
-            </div>
+              {!expandedCategories[category.title] && category.items.length > 6 && (
+                <li 
+                  className="text-sm italic text-center cursor-pointer hover:text-[#e3b670] transition-colors duration-300"
+                  onClick={() => toggleCategory(category.title)}
+                >
+                  +{category.items.length - 6} more items
+                </li>
+              )}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+        <div 
+        className="chef-specials mt-16 relative rounded-lg shadow-xl hidden md:block"
+        style={{
+          transform: `translateY(${Math.max(0, (scrollY - 1000) * 0.1)}px)`
+        }}
+      >
+        <div className="relative bg-[#1a1c1c]/80 backdrop-blur-sm p-8">
+          <div className="flex items-center justify-between mb-8">
+            <h3 className="text-3xl font-bold text-[#e3b670]">Chef's Specials</h3>
+            <Coffee className="w-8 h-8 animate-bounce-slow text-[#e3b670]" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {specialDishes.map((dish, index) => (
+              <div 
+                key={index}
+                className="relative h-[200px] rounded-lg overflow-hidden group transform hover:-translate-y-1 transition-all duration-500"
+                style={{ animationDelay: `${index * 200}ms` }}
+              >
+                <img 
+                  src={dish.image} 
+                  alt={dish.title} 
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center group-hover:bg-opacity-40 transition-all duration-300">
+                  <span className="text-white text-xl font-bold transform group-hover:scale-105 transition-transform duration-300">
+                    {dish.title}
+                  </span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
+      </div>
 
       <button 
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 bg-[#d2a260] text-[#121414] p-3 rounded-full shadow-lg hover:bg-[#b88c4a] transition-colors duration-300 z-50"
-        style={{
-          transform: `translateY(${Math.min(0, (scrollY - 1000) * -0.1)}px)`
-        }}
-      >
-        <ChevronUp size={24} />
-      </button>
-      <div className="mt-[50vh]">
-      <Footer/>
-      </div>
+      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      className="fixed bottom-8 right-8 bg-[#d2a260] text-[#121414] p-3 rounded-full shadow-lg hover:bg-[#b88c4a] transition-colors duration-300"
+    >
+      <ChevronUp size={24} />
+    </button>
+    
+      <div className="mt-[120vh] pb-1 lg:mt-[40vh]">
+      <Footer />
+    </div>
+    
     </div>
   );
 }

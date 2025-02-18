@@ -31,7 +31,7 @@ export default function Menu() {
 
   return (
     <>
-      <div className="text-center mt-8">
+      <div className="text-center mt-[-3vh]">
         <ShinyText
           text="Our Menu"
           disabled={false}

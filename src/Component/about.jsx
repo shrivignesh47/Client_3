@@ -7,7 +7,7 @@ import ShinyText from '../components/ShinyText/ShinyText';
 function About() {
   return (
     <div className="min-h-screen bg-[#121414]">
-    <Navbar />
+      <Navbar />
       <div 
         className="h-[60vh] bg-fixed bg-cover bg-center relative"
         style={{
@@ -26,7 +26,7 @@ function About() {
               <Clock className="w-6 h-6 text-amber-600" />
             </div>
             <div>
-              <div className="text-2xl  fabril-fatfacefont-bold text-[#d2a260]">30+ Years</div>
+              <div className="text-2xl fabril-fatface font-bold text-[#d2a260]">30+ Years</div>
               <ShinyText text="Of Excellence" disabled={false} speed={3} className="custom-class fabril-fatface text-2xl" />
             </div>
           </div>
@@ -35,7 +35,7 @@ function About() {
               <Star className="w-6 h-6 text-amber-600" />
             </div>
             <div>
-              <div className="text-2xl  fabril-fatface font-bold text-[#d2a260]">Signature</div>
+              <div className="text-2xl fabril-fatface font-bold text-[#d2a260]">Signature</div>
               <ShinyText text="Biriyani Specialist" disabled={false} speed={3} className="custom-class fabril-fatface text-2xl" />
             </div>
           </div>
@@ -57,9 +57,9 @@ function About() {
               <div className="bg-amber-50 p-3 rounded-full">
                 <History className="w-6 h-6 text-amber-600" />
               </div>
-              <h2 className="text-3xl  fabril-fatface font-bold text-[#d2a260]">Our Beginning</h2>
+              <h2 className="text-3xl fabril-fatface font-bold text-[#d2a260]">Our Beginning</h2>
             </div>
-            <div className="pl-16">
+            <div className="pl-0">
               <ShinyText text="Established in 1992, Hotel Taj started as a humble restaurant with seating for fewer than 20 guests. From the very beginning, our primary focus has been on delivering exceptional taste and quality in every dish we serve. This dedication to flavor and authenticity quickly earned us a reputation, making our Biriyani varieties a local favorite." disabled={false} speed={3} className="custom-class fabril-fatface text-2xl" />
             </div>
           </div>
@@ -70,9 +70,8 @@ function About() {
               </div>
               <h2 className="text-3xl fabril-fatface font-bold text-[#d2a260]">Our Journey</h2>
             </div>
-            <div className="pl-16">
-            <ShinyText text="Over the years, our commitment to excellence helped us grow, leading to the expansion of our brand. We proudly operated a branch in Pallakada, which was once a renowned dining spot. Although this branch is now closed, our legacy continues to thrive at our new location." disabled={false} speed={3} className="custom-class fabril-fatface text-2xl" />
-              
+            <div className="pl-0">
+              <ShinyText text="Over the years, our commitment to excellence helped us grow, leading to the expansion of our brand. We proudly operated a branch in Pallakada, which was once a renowned dining spot. Although this branch is now closed, our legacy continues to thrive at our new location." disabled={false} speed={3} className="custom-class fabril-fatface text-2xl" />
             </div>
           </div>
           <div className="mb-16">
@@ -82,7 +81,7 @@ function About() {
               </div>
               <h2 className="text-3xl fabril-fatface font-bold text-[#d2a260]">Where to Find Us</h2>
             </div>
-            <div className="pl-16">
+            <div className="pl-0">
               <ShinyText text="To recreate the same warm and inviting atmosphere, we launched Hotel Taj Multicuisine Restaurant in Ooty. Conveniently located at New Main Bazaar Road, Old Amirtha Hotel Building, Ooty, Tamil Nadu - 643001, this branch carries forward our tradition of serving delicious, high-quality meals in a welcoming ambiance." disabled={false} speed={3} className="custom-class fabril-fatface text-2xl" />
             </div>
           </div>
@@ -91,9 +90,9 @@ function About() {
               <div className="absolute -top-4 -left-4 text-amber-200 transform -rotate-12">
                 <span className="text-6xl">"</span>
               </div>
-
-              <ShinyText text=" At Hotel Taj, we believe in blending rich flavors with a memorable dining experience. Whether it's our signature Biriyani or a variety of other mouthwatering dishes, we continue to bring the best to our customers. Visit us and indulge in a culinary journey like no other!" disabled={false} speed={3} className="custom-class fabril-fatface text-2xl" />
-              
+              <div className="pl-0">
+              <ShinyText text="At Hotel Taj, we believe in blending rich flavors with a memorable dining experience. Whether it's our signature Biriyani or a variety of other mouthwatering dishes, we continue to bring the best to our customers. Visit us and indulge in a culinary journey like no other!" disabled={false} speed={3} className="custom-class fabril-fatface text-2xl" />
+              </div>
               <div className="absolute -bottom-4 -right-4 text-amber-200 transform rotate-12">
                 <span className="text-6xl">"</span>
               </div>
