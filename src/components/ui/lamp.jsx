@@ -12,7 +12,7 @@ export const LampContainer = ({ children, className }) => {
         className
       )}
     >
-      <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 mt-[10vh] sm:mt-[40vh]">
+      <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 mt-[20vh] sm:mt-[40vh]">
         {/* Left Light */}
         <motion.div
           initial={{ opacity: 0.5, width: "45rem" }}
@@ -67,7 +67,7 @@ export const LampContainer = ({ children, className }) => {
 
         {/* Lamp Top Line */}
         <motion.div
-          initial={{ width: "8rem" }}
+          initial={{ width: "1rem" }}
           whileInView={{ width: "15rem" }}
           transition={{
             delay: 0.3,
