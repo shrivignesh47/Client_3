@@ -11,6 +11,7 @@ import Menu from './Menu';
 import Location from './Location';
 import { InfiniteMovingCardsDemo } from './Testimonal';
 import Footer from './footer';
+import round from '../Assets/round.gif';
 
 export default function Homepage() {
   return (
@@ -68,6 +69,7 @@ export default function Homepage() {
               maxWidth: '45vh', // Set max width for larger screens
             }}
           />
+          
         </div>
       </div>
 

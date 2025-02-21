@@ -14,7 +14,7 @@ export default function VisionMission() {
 
   return (
     <div>
-      <LampContainer className="lg:mt-[-10vh] h-[100vh] md:mt-[10vh] sm:mt-[-20vh] mt-[1vh]">
+      <LampContainer className="lg:mt-[-14vh] h-[100vh] md:mt-[10vh] sm:mt-[-20vh] mt-[1vh]">
         <motion.div
           initial={{ opacity: 0.5, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
