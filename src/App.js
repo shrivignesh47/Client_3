@@ -9,7 +9,7 @@ import MenuPage from './Component/Menupage';
 import Footer from './Component/footer';
 import About from './Component/about';
 import Location from './Component/Location';
-import Contact from './Component/contact';
+import Contact from './Component/Contact';
 
 function App() {
   return (
