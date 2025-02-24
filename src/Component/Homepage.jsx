@@ -3,7 +3,6 @@ import Navbar from './Navbar';
 import '../Styles/Home.css';
 import logo from '../Assets/taj.png';
 import Car from './Carousel1';
-import Gallery from './Gallery';
 import VisionMission from './VisonMisson';
 import { InstagramEmbed } from './InstagramEmbed';
 import dpattern from '../Assets/dpattern.png';
@@ -12,10 +11,11 @@ import Location from './Location';
 import { InfiniteMovingCardsDemo } from './Testimonal';
 import Footer from './footer';
 import round from '../Assets/round.gif';
+import Card from './HorizontalScrollCarousel';
 
 export default function Homepage() {
   return (
-    <div className="homecontainer h-[600vh]">
+    <div className="homecontainer h-[900vh]">
       <Navbar />
       {/* Carousel Right Section */}
       <div className="carousel-right1" style={{ height: '0vh' }}>
@@ -76,7 +76,7 @@ export default function Homepage() {
       {/* Other Sections */}
       <VisionMission />
       <InstagramEmbed  />
-      <Gallery />
+   <Card/>
       <br></br>
       <br></br>
       <br></br>

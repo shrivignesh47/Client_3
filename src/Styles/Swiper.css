@@ -76,12 +76,13 @@
   /* For screens up to 762px */
   @media (max-width: 762px) {
     .mySwiper {
-      margin-top: 5vh;
-      margin-left: 0;
-      width: 100%; /* Adjust width to fit smaller screens */
-      height: 100%; /* Adjust height proportionally */
+      flex-direction: column;
+      margin-left:0vh;
+      margin-top:0vh;
+      width:100%; /* Full-width for smaller devices */
+      height:40%;
+      top:54vh; /* Adjust height proportionally */
     }
-  
     .mySwiper-slide {
       font-size: 16px; /* Slightly smaller text */
     }
@@ -102,7 +103,7 @@
       margin-top:0vh;
       width:100%; /* Full-width for smaller devices */
       height:100%;
-      top:50vh; /* Adjust height proportionally */
+      top:52vh; /* Adjust height proportionally */
     }
   
     .mySwiper-slide {

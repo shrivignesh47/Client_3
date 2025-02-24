@@ -3,15 +3,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import '../Styles/Swiper.css';
-import img3 from '../Assets/soup1.png';
-import img6 from '../Assets/cbriyani.png';
-import img7 from '../Assets/lemon.png';
+import img3 from '../Assets/posters/p11.png';
+import img6 from '../Assets/posters/p10.png';
+import img7 from '../Assets/posters/pt9.png';
 import img1 from '../Assets/posters/pt8.png';
-import img4 from '../Assets/beef.png';
-import mchicken from '../Assets/mobile_responsive/mchicken.png';
-import mbeef from '../Assets/mobile_responsive/mbeef.png';
-import mlemon from '../Assets/mobile_responsive/mlemon.png';
-import msoup from '../Assets/mobile_responsive/msoup.png';
+import img12 from '../Assets/posters/p12.png';
+import img4 from '../Assets/posters/p13.png';
+import mchicken from '../Assets/posters/pt5.jpg';
+import mbeef from '../Assets/posters/pt3.jpg';
+import mlemon from '../Assets/posters/pt2.jpg';
+import msoup from '../Assets/posters/pt1.jpg';
+import mbimg1 from '../Assets/posters/pt4.jpg';
+// import mbimg2 from '../Assets/posters/pt6.jpg';
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
@@ -28,8 +31,8 @@ export default function Car() {
   }, []);
 
   const images = isMobile
-    ? [mchicken, mbeef, msoup, mlemon]
-    : [img1, img4, img3, img6, img7];
+    ? [mchicken, mbeef, msoup, mlemon,mbimg1]
+    : [img1, img4, img3, img6, img7, img12];
 
   return (
     <Swiper

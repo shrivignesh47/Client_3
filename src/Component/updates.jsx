@@ -7,8 +7,8 @@ export default function Updates() {
 
   // Function to fetch data from Google Sheets
   const fetchData = async () => {
-    const sheetId = '1i6RmS3GpdfS0t750PD-idF9a6WKrrbWnBWNpYlOBm_8'; // Your Google Sheets ID
-    const range = 'Sheet1!A1'; // The range you want to fetch from
+    const sheetId = '1b7web2lBSweoh3SyHrUeLuxDgbgJ0lzb-LyRskM2ojk'; // Your Google Sheets ID
+    const range = 'Updates!A1'; // The range you want to fetch from
 
     // Google Sheets API URL with your API key
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=AIzaSyAAqb3DVZpY8K0kRu65iqPjPUW61n71Jto`;

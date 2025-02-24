@@ -31,7 +31,7 @@ export default function Menu() {
 
   return (
     <>
-      <div className="text-center mt-[-3vh]">
+      <div className="text-center mt-[-3vh] ">
         <ShinyText
           text="Our Menu"
           disabled={false}
@@ -42,8 +42,8 @@ export default function Menu() {
           Explore our delicious offerings
         </p>
       </div>
-      <div className="min-h-screen flex justify-center items-center bg-[#121414] px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-6xl">
+      <div className="min-h-screen flex justify-center items-center bg-[#121414] px-6 py-12 g">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-6xl ">
           <div className="flex flex-col justify-center space-y-4 text-[#D2A260]">
             <ShinyText
               text="Delicious Dishes"

@@ -20,3 +20,28 @@ code {
 .fabril-fatface {
   font-family: 'Fabril Fatface', serif;
 }
+
+/* custom-scrollbar.css */
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #121414; /* Background color of the track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d2a260; /* Color of the thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: red; /* Color of the thumb on hover */
+}
+
+.gglow{
+  background: linear-gradient(to right, #6A5ACD, #C54B8C, #B284BE);
+  filter: blur(150px)
+}

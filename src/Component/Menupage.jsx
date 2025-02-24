@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import footer from './footer';
 import Footer from './footer';
 import ShinyText from '../components/ShinyText/ShinyText';
+import { ShineBorder } from '../components/magicui/shine-border';
 // import Footer from './footer';
 
 export default function MenuPage() {
@@ -14,11 +15,11 @@ export default function MenuPage() {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-
+    
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
+  
   const toggleCategory = (categoryTitle) => {
     setExpandedCategories((prev) => ({
       ...prev,
@@ -28,11 +29,11 @@ export default function MenuPage() {
 
   return (
     <div className="menupcon h-full bg-[#121414] text-[#d2a260] overflow-hidden">
-      <Navbar />
-      {/* Parallax Header */}
+    <Navbar />
+    {/* Parallax Header */}
       <div 
-        className="relative h-screen overflow-hidden"
-        style={{
+      className="relative h-screen overflow-hidden"
+      style={{
           clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0 100%)'
         }}
       >
@@ -47,18 +48,19 @@ export default function MenuPage() {
           }}
         />
         <div className="relative h-full flex flex-col items-center justify-center text-white">
-          <Utensils 
-            className="w-20 h-20 mb-6 animate-spin-slow text-[#e3b670]"
-            style={{
-              transform: `translateY(${scrollY * 0.2}px)`
+        <Utensils 
+        className="w-20 h-20 mb-6 animate-spin-slow text-[#e3b670]"
+        style={{
+          transform: `translateY(${scrollY * 0.2}px)`
+        }}
+        />
+        
+        <h1 
+        className="text-10xl text-[#d2a260] font-bold mb-4 animate-slide-down"
+        style={{
+          transform: `translateY(${scrollY * 0.3}px)`
             }}
-          />
-          <h1 
-            className="text-10xl text-[#d2a260] font-bold mb-4 animate-slide-down"
-            style={{
-              transform: `translateY(${scrollY * 0.3}px)`
-            }}
-          >
+            >
           <ShinyText text="Hotel Taj" disabled={false} speed={3} className="custom-class fabril-fatface text-[10vh]" />
           </h1>
           <p 
@@ -67,25 +69,24 @@ export default function MenuPage() {
               transform: `translateY(${scrollY * 0.4}px)`
             }}
           >
-            Culinary Excellence Since 1995
+          Culinary Excellence Since 1995
           </p>
-        </div>
-      </div>
-      <div className="max-w-7xl mx-auto px-4 py-6 font-serif relative">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {menuCategories.map((category, index) => (
-          <div 
+          </div>
+          </div>
+          <div className="max-w-7xl mx-auto px-4 py-6 font-serif relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {menuCategories.map((category, index) => (
+            <div 
             key={index} 
             className="bg-[#1a1c1c] p-6 rounded-lg shadow-xl transform hover:-translate-y-1 transition-all duration-300 animate-fade-in"
             style={{ 
               animationDelay: `${index * 100}ms`,
-              transform: `translateY(${Math.max(0, (scrollY - 500) * 0.1)}px)`
-            }}
-          >
+              transform: `translateY(${Math.max(0, (scrollY - 500) * 0.1)}px)`}}
+            >
             {/* Category Title */}
             <h3 
-              className="text-xl font-bold mb-4 flex items-center justify-between cursor-pointer hover:text-[#e3b670] transition-colors duration-300"
-              onClick={() => toggleCategory(category.title)}
+            className="text-xl font-bold mb-4 flex items-center justify-between cursor-pointer hover:text-[#e3b670] transition-colors duration-300"
+            onClick={() => toggleCategory(category.title)}
             >
               <span className="flex items-center gap-2">
                 <Menu className="w-5 h-5" />
@@ -117,8 +118,9 @@ export default function MenuPage() {
                 </li>
               )}
             </ul>
-          </div>
-        ))}
+            </div>
+          
+          ))}
       </div>
 
         <div 
@@ -131,8 +133,8 @@ export default function MenuPage() {
           <div className="flex items-center justify-between mb-8">
             <h3 className="text-3xl font-bold text-[#e3b670]">Chef's Specials</h3>
             <Coffee className="w-8 h-8 animate-bounce-slow text-[#e3b670]" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {specialDishes.map((dish, index) => (
               <div 
                 key={index}
@@ -148,26 +150,27 @@ export default function MenuPage() {
                   <span className="text-white text-xl font-bold transform group-hover:scale-105 transition-transform duration-300">
                     {dish.title}
                   </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      </div>
-
-      <button 
-      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  </div>
+                  </div>
+                  ))}
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+      
+                  <button 
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       className="fixed bottom-8 right-8 bg-[#d2a260] text-[#121414] p-3 rounded-full shadow-lg hover:bg-[#b88c4a] transition-colors duration-300"
-    >
+      >
       <ChevronUp size={24} />
-    </button>
-    
+      </button>
+      
       <div className="mt-[120vh] pb-1 lg:mt-[40vh]">
       <Footer />
-    </div>
-    
-    </div>
+      </div>
+
+      
+      </div>
   );
 }
 
