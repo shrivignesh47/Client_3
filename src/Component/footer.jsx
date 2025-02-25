@@ -15,7 +15,7 @@ export default function Footer() {
           <h2 className="text-lg font-bold text-[#FFD700]">
             <ShinyText text="Hotel Taj" disabled={false} speed={3} className="fabril-fatface text-lg" />
           </h2>
-          <p className="text-gray-400">📍 Old Amirtha Hotel Building, New Main Bazaar Road, Upper Bazar, Ooty, Tamil Nadu 643001</p>
+          <p className="text-gray-400">📍 Old Amirtha Hotel Building, New Main Bazaar Road, Ooty, Tamil Nadu 643001</p>
           <p className="text-gray-400">📞 +91 89404 03040</p>
         </div>
 
