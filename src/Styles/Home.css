@@ -6,11 +6,23 @@
   .carousel1 {
     width: 98vw;
     background-color: #121414;
-    clip-path: circle(62.9% at 13% 0);
+    clip-path: circle(62.9% at 13% 0); /* Right-side semi-circle */
     z-index: 1;
     position: relative;
     background-image: url("../Assets/pattern-wave.png");
-}
+    display: flex; /* Enable flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden; /* Ensure content stays within the semi-circle */
+  }
+  
+  .carousel1 h1 {
+    max-width: 90%; /* Limit the width of the text to fit inside the semi-circle */
+    color: #d2a260; /* Text color */
+    font-family: "fabril-fatface", serif; /* Font styling */
+    /* font-size: clamp(10px, 2vw, 16px); Responsive font size */
+    line-height: 1.5; /* Adjust line height for readability */
+  }
 
 
 

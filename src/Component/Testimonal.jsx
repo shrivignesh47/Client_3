@@ -5,10 +5,25 @@ import ShinyText from "../components/ShinyText/ShinyText";
 
 export function InfiniteMovingCardsDemo() {
   return (
-    <div className="h-[40rem] rounded-md mt-[-12vh] flex flex-col antialiased bg-#121414 dark:bg-#121415 dark:bg-grid-#121415/[0.05] items-center justify-center relative overflow-hidden fabril-fatface">
-    <ShinyText text="Testimonials" disabled={false} speed={3} className="custom-class fabril-fatface text-3xl" />
-    <br></br>
-      <InfiniteMovingCards items={testimonials} direction="right" speed="slow" />
+    <div className="relative top-[-120vh] sm:top-[-120vh] md:top-[-280vh] lg:top-[-210vh] xl:top-[-240vh]">
+      <div className="h-[40rem] rounded-md mt-[-12vh] flex flex-col antialiased bg-[#121414] dark:bg-[#121415] dark:bg-grid-[#121415]/[0.05] items-center justify-center relative overflow-hidden fabril-fatface">
+        {/* Testimonials Title */}
+        <ShinyText
+          text="Testimonials"
+          disabled={false}
+          speed={3}
+          className="custom-class fabril-fatface text-4xl"
+        />
+        {/* Gap between Title and Cards */}
+        <div className="h-[5rem] sm:h-[5rem]"></div> {/* Spacer for gap */}
+        {/* Infinite Moving Cards */}
+        <InfiniteMovingCards
+          items={testimonials}
+          direction="right"
+          speed="slow"
+          className="mt-8" // Additional margin for spacing
+        />
+      </div>
     </div>
   );
 }

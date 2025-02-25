@@ -11,7 +11,6 @@ export function InstagramEmbed() {
     elfsightScript.src = "https://static.elfsight.com/platform/platform.js";
     elfsightScript.async = true;
     document.body.appendChild(elfsightScript);
-
     // Cleanup the script when the component unmounts
     return () => {
       document.body.removeChild(elfsightScript);
@@ -19,63 +18,60 @@ export function InstagramEmbed() {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden">
-      {/* Background Video */}
-      <div className="relative w-full" style={{ aspectRatio: "16 / 9" }}>
-        <video
-          autoPlay
-          loop
-          muted
-          className="w-full h-[70vh] sm:h-[50vh] lg:h-[70vh] object-cover absolute top-0 left-0 z-0"
-        >
-          <source src={briyanibg} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="absolute top-0 left-0 w-full h-full "></div>
-      </div>
-
-      {/* Instagram Feed Card */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="relative mx-auto max-w-4xl p-4 z-20 mt-[10vh] sm:mt-[35vh] lg:mt-[-80vh]"
+    <div className="relative w-full overflow-hidden top-[10vh] sm:top-[5vh] md:top-[-25vh] lg:top-[-35vh] xl:top-[-20vh]">
+    {/* Background Video */}
+    <div className="relative w-full" style={{ aspectRatio: "16 / 9" }}>
+      <video
+        autoPlay
+        loop
+        muted
+        className="w-full h-[70vh] sm:h-[50vh] lg:h-[70vh] object-cover absolute top-0 left-0 z-0"
       >
-        <div className="instagram-embed-container border-[6px] border-[#d2a260] relative rounded-lg shadow-lg p-4 bg-[#121414]">
-          {/* Title with Shiny Text */}
-          <h2 className="fabril-fatface text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8 font-playfair text-[#d2a260]">
-            <ShinyText
-              text="Taste Our Instagram Feed"
-              disabled={false}
-              speed={3}
-              className="custom-class fabril-fatface text-2xl sm:text-3xl"
-            />
-          </h2>
-
-          {/* Elfsight Widget Container */}
-          <div className="relative h-[45vh]">
-            {/* Dark Overlay */}
-            <div
-              className="absolute top-0 left-0 w-full h-full bg-black/50 backdrop-blur-sm"
-              style={{ pointerEvents: "none" }} // Allow clicks to pass through
-            ></div>
-            <div
-              className="elfsight-app-fc51a3d7-8e7c-41f0-8efb-d1ab120c441a border-[6px] border-[#d2a260] relative"
-              data-elfsight-app-lazy
-              style={{
-                width: "100%",
-                height: "100%",
-                maxHeight: "450px", // Ensure max height
-                overflow: "hidden", // Prevent overflowing content
-              }}
-            ></div>
-          </div>
-        </div>
-      </motion.div>
+        <source src={briyanibg} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="absolute top-0 left-0 w-full h-full"></div>
     </div>
+  
+    {/* Instagram Feed Card */}
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="relative mx-auto max-w-4xl p-4 z-20 top-[-1vh] sm:top-[-45vh] lg:top-[-50vh] xl:top-[-75vh]"
+    >
+      <div className="instagram-embed-container border-[6px] border-[#d2a260] relative rounded-lg shadow-lg p-4 bg-[#121414]">
+        {/* Title with Shiny Text */}
+        <h2 className="fabril-fatface text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8 font-playfair text-[#d2a260]">
+          <ShinyText
+            text="Taste Our Instagram Feed"
+            disabled={false}
+            speed={3}
+            className="custom-class fabril-fatface text-2xl sm:text-3xl"
+          />
+        </h2>
+        <div className="relative h-[85  vh] sm:h-[60vh] md:h-[50vh] xl:h-[50vh]">
+          {/* Dark Overlay */}
+          <div
+            className="absolute top-0 left-0 w-full h-full bg-black/50 backdrop-blur-sm"
+            style={{ pointerEvents: "none" }} // Allow clicks to pass through
+          ></div>
+          <div
+            className="elfsight-app-fc51a3d7-8e7c-41f0-8efb-d1ab120c441a border-[6px] border-[#d2a260] relative"
+            data-elfsight-app-lazy
+            style={{
+              width: "100%",
+              height: "100%",
+              maxHeight: "550px", // Ensure max height
+              overflow: "hidden", // Prevent overflowing content
+            }}
+          ></div>
+        </div>
+      </div>
+    </motion.div>
+  </div>
   );
 }
-
 
 
 // import React, { useEffect } from "react";
