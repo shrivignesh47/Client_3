@@ -3,7 +3,7 @@ import { Card, CardContent } from "../components/ui/card";
 import { MapPin } from "lucide-react";
 import ShinyText from "../components/ShinyText/ShinyText";
 import Navbar from "./Navbar";
-import Footer from "./footer";
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -21,14 +21,14 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Submitted shared with hoteltaj", formData);
+    // Handle form submission logic, such as sending the data to an API or email.
+    console.log("Form Submitted", formData);
   };
 
   return (
-    <div>
-    <Navbar />
     <div className="flex flex-col items-center justify-center min-h-screen bg-[#121415] px-4 py-10">
-    <Card className="w-full max-w-5xl rounded-2xl bg-[#1A1D1F] shadow-xl border border-[#2A2E30]">
+    <Navbar/>
+      <Card className="w-full max-w-5xl rounded-2xl bg-[#1A1D1F] shadow-xl border border-[#2A2E30]">
         <CardContent className="p-6">
           <div className="flex flex-col md:flex-row gap-6">
             
@@ -51,8 +51,10 @@ export default function Contact() {
                   loading="lazy"
                   className="rounded-md"
                 ></iframe>
-                </div>
+              </div>
             </div>
+            
+            {/* Right Side: Contact Us Form */}
             <div className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left">
               <h3 className="text-2xl font-bold text-[#FFD700] mb-4">
                 <ShinyText text="Contact Us" disabled={false} speed={3} className="custom-class" />
@@ -60,10 +62,12 @@ export default function Contact() {
               <p className="text-[#BFBAB4] mb-4">
                 <ShinyText text="We are here to assist you with your dining experience." disabled={false} speed={3} className="custom-class" />
               </p>
+              
+              {/* Contact Form */}
               <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="flex flex-col">
-              <label className="text-[#BFBAB4]" htmlFor="name">Name</label>
-              <input
+                <div className="flex flex-col">
+                  <label className="text-[#BFBAB4]" htmlFor="name">Name</label>
+                  <input
                     type="text"
                     id="name"
                     name="name"
@@ -104,19 +108,15 @@ export default function Contact() {
                   <button
                     type="submit"
                     className="w-full bg-[#D2A260] text-[#1A1D1F] py-2 rounded-md hover:bg-[#FFD700] transition"
-                    >
+                  >
                     Send Message
                   </button>
                 </div>
               </form>
-              </div>
+            </div>
           </div>
         </CardContent>
       </Card>
-      </div>
-      <div>
-      <Footer />
-    </div>
     </div>
   );
 }

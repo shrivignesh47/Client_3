@@ -15,8 +15,8 @@ export default function Footer() {
           <h2 className="text-lg font-bold text-[#FFD700]">
             <ShinyText text="Hotel Taj" disabled={false} speed={3} className="fabril-fatface text-lg" />
           </h2>
-          <p className="text-gray-400">📍 1235 Main St, Ooty, Tamil Nadu</p>
-          <p className="text-gray-400">📞 +91 123 456 7890</p>
+          <p className="text-gray-400">📍 Old Amirtha Hotel Building, New Main Bazaar Road, Upper Bazar, Ooty, Tamil Nadu 643001</p>
+          <p className="text-gray-400">📞 +91 89404 03040</p>
         </div>
 
         {/* Center - Navigation Links */}
@@ -46,16 +46,20 @@ export default function Footer() {
             <img src={zomatoLogo} alt="Zomato" className="w-10 hover:scale-110 transition" />
           </div>
           <div className="flex space-x-2 mt-2">
-            <FaFacebook className="cursor-pointer hover:text-blue-500" />
-            <FaInstagram className="cursor-pointer hover:text-pink-500" />
-            <FaTwitter className="cursor-pointer hover:text-blue-400" />
+            <a href="https://www.facebook.com/hoteltajooty" target="_blank" rel="noopener noreferrer">
+              <FaFacebook className="cursor-pointer hover:text-blue-500" />
+            </a>
+            <a href="https://www.instagram.com/hotel_taj_ooty_/" target="_blank" rel="noopener noreferrer">
+              <FaInstagram className="cursor-pointer hover:text-pink-500" />
+            </a>
           </div>
         </div>
       </div>
 
       {/* Bottom Line */}
       <div className="text-center text-gray-500 mt-3 border-t border-gray-700 pt-1">
-        © 2025 Hotel Taj. All rights reserved.
+        © 2025 MagnitudeMedia. All rights reserved.
+       
       </div>
     </footer>
   );
