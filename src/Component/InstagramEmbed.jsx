@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import briyanibg from "../Assets/bgvideo.mp4";
+import briyanibg from "../Assets/tajbg123.mp4";
 import "../Styles/vm.css";
 import ShinyText from "../components/ShinyText/ShinyText";
 
@@ -40,7 +40,7 @@ export function InstagramEmbed() {
       transition={{ duration: 0.8 }}
       className="relative mx-auto max-w-4xl p-4 z-20 top-[-1vh] sm:top-[-45vh] lg:top-[-50vh] xl:top-[-75vh]"
     >
-      <div className="instagram-embed-container border-[6px] border-[#d2a260] relative rounded-lg shadow-lg p-4 bg-[#121414]">
+      <div className="instagram-embed-container  relative rounded-lg shadow-lg p-4 bg-[#121414]">
         {/* Title with Shiny Text */}
         <h2 className="fabril-fatface text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8 font-playfair text-[#d2a260]">
           <ShinyText
